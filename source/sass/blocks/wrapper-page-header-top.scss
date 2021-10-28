@@ -1,0 +1,14 @@
+.wrapper-page-header-top {
+  width:100%;
+  border-bottom: 1px solid #F6F5F4;
+
+  @media (max-width: $tablet-width) {
+    box-sizing: border-box;
+    padding:0 45px;
+    border-bottom: none;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding:0 15px;
+  }
+}

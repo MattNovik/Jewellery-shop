@@ -26,36 +26,40 @@
 </head>
 <body class="page">
   <header class="page-header">
-    <div class="wrapper-search wrapper-search--desktop">
-      <input type="text" id="search" class="search" placeholder="Type here to search">
-      <label for="search">
-        <svg height="14" width="14" viewBox="0 0 14 14"><use xlink:href="img/sprite_auto.svg#icon-search"></use></svg>
-        </label>
-    </div>
-    <nav class="menu menu--tablet">
-      <svg height="16" width="25" viewBox="0 0 25 16"><use xlink:href="img/sprite_auto.svg#icon-hamburger"></use></svg>
-    </nav>
-    <picture>
-      <!-- 1x: 66x66; 2x: 132x132 -->
-      <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
-      <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo" width="66" height="66">
-    </picture>
-    <div class="wrapper-login-busket wrapper-login-busket--tablet">
-      <a href="#" class="wrapper-login-busket__login">
-        <svg height="16" width="18" viewBox="0 0 18 16"><use xlink:href="img/sprite_auto.svg#icon-busket"></use></svg>
-      </a>
-    </div>
-    <div class="wrapper-login-busket wrapper-login-busket--desktop">
-      <a href="#" class="wrapper-login-busket__login">Login</a>
-      <a href="#" class="wrapper-login-busket__busket">Cart <span>0</span></a>
+    <div class="wrapper-page-header-top">
+      <div class="page-header__top">
+        <div class="wrapper-search wrapper-search--desktop">
+          <input type="text" id="search" class="search" placeholder="Type here to search">
+          <label for="search">
+            <svg height="14" width="14" viewBox="0 0 14 14"><use xlink:href="img/sprite_auto.svg#icon-search"></use></svg>
+            </label>
+        </div>
+        <nav class="menu menu--tablet">
+          <svg height="18" width="25" viewBox="0 0 25 18"><use xlink:href="img/sprite_auto.svg#icon-hamburger"></use></svg>
+        </nav>
+        <picture>
+          <!-- 1x: 66x66; 2x: 132x132 -->
+          <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+          <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo" width="66" height="66">
+        </picture>
+        <div class="wrapper-login-busket wrapper-login-busket--tablet">
+          <a href="#" class="wrapper-login-busket__login">
+            <svg height="18" width="20" viewBox="0 0 20 18"><use xlink:href="img/sprite_auto.svg#icon-busket"></use></svg>
+          </a>
+        </div>
+        <div class="wrapper-login-busket wrapper-login-busket--desktop">
+          <a href="#" class="wrapper-login-busket__login">Login</a>
+          <a href="#" class="wrapper-login-busket__busket">Cart <span>0</span></a>
+        </div>
+      </div>
     </div>
     <nav class="menu menu--desktop">
-      <ul class="menu-list">
-        <li>What’s new</li>
-        <li>Chokers</li>
-        <li>Necklaces</li>
-        <li>Rings</li>
-        <li>Earrings</li>
+      <ul class="menu__list">
+        <li><a href="#">What’s new</a></li>
+        <li><a href="#">Chokers</a></li>
+        <li><a href="#">Necklaces</a></li>
+        <li><a href="#">Rings</a></li>
+        <li><a href="#">Earrings</a></li>
       </ul>
     </nav>
   </header>
@@ -69,7 +73,7 @@
     </section>
     <section class="blog">
       <h2>Blog</h2>
-      <a href="#" class="blog-read-more">Read All</a>
+      <a href="#" class="blog__read-more-link">Read All</a>
       <div class="wrapper-articles">
         <article class="article article--first">
           <div class="article__info">
@@ -98,7 +102,7 @@
     </section>
     <section class="questions">
       <h2>Frequently asked questions</h2>
-      <ul class="wrapper-list-questions">
+      <ul class="questions__list">
         <li>
           <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
           <h3>What materials are the jewellery made of?</h3>
@@ -123,7 +127,7 @@
     </section>
     <section class="inst-pictures">
       <h2>@Chjewellery</h2>
-      <a href="#" class="follow-link">Follow Us</a>
+      <a href="#" class="inst-pictures__follow-link">Follow Us</a>
       <div class="wrapper-pictures">
         <picture>
           <!-- 1x: 230x230; 2x: 460x460 -->

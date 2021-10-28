@@ -1,0 +1,21 @@
+.search {
+  min-width:140px;
+  width:max-content;
+  border:none;
+  border-bottom:solid 1px transparent;
+  outline: none;
+  background: transparent;
+  padding:0;
+  margin:0 0 0 29px;
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9B9997;
+
+  &:hover {
+    border-bottom:solid 1px #9B9997;
+    cursor: pointer;
+  }
+}

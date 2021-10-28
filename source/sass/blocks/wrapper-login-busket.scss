@@ -1,0 +1,49 @@
+.wrapper-login-busket {
+  min-width:205px;
+  display: flex;
+  justify-content: flex-end;
+  margin:17px 0 0 0;
+
+  a:first-child {
+    margin:0 35px 0;
+  }
+
+  a {
+    font-family: $poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $text-dark;
+
+    &:hover {
+      color:$second;
+    }
+  }
+
+  &.wrapper-login-busket--tablet {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+
+    &.wrapper-login-busket--tablet {
+      display: flex;
+      min-width:auto;
+      width:auto;
+
+      svg {
+        stroke:$text-dark;
+        fill:none;
+      }
+
+      a {
+        margin:0;
+      }
+    }
+
+    &.wrapper-login-busket--desktop {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.wrapper-search {
+  position: relative;
+  margin:17px 0 0 0;
+
+  label {
+    position: absolute;
+    top:4px;
+    left:0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
