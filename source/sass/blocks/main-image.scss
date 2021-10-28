@@ -1,0 +1,72 @@
+.main-image {
+  width:100%;
+  min-height:463px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/main-index-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: image-set(
+        url("../img/main-index-desktop.webp") type("image/webp"),
+        url("../img/main-index-desktop.jpg") type("image/jpeg"));
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-index-desktop@2x.jpg");
+    background-image: image-set(
+        url("../img/main-index-desktop@2x.webp") type("image/webp"),
+        url("../img/main-index-desktop@2x.jpg") type("image/jpeg"));
+  }
+
+  h1 {
+    font-family: $cormorant;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 58px;
+    letter-spacing: 0.03em;
+    color:#fff;
+    margin:0;
+  }
+
+  p {
+    margin:20px 0 0 0;
+    font-family: $cormorant;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 49px;
+    text-align: center;
+    color:#fff;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 463px;
+    background-image: url("../img/main-index-tablet.jpg");
+    background-image: image-set(
+        url("../img/main-index-tablet.webp") type("image/webp"),
+        url("../img/main-index-tablet.jpg") type("image/jpeg"));
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-index-tablet@2x.jpg");
+      background-image: image-set(
+          url("../img/main-index-tablet@2x.webp") type("image/webp"),
+          url("../img/main-index-tablet@2x.jpg") type("image/jpeg"));
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    background-image: url("../img/main-index-mob.jpg");
+    background-image: image-set(
+        url("../img/main-index-mob.webp") type("image/webp"),
+        url("../img/main-index-mob.jpg") type("image/jpeg"));
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-index-mob@2x.jpg");
+      background-image: image-set(
+          url("../img/main-index-mob@2x.webp") type("image/webp"),
+          url("../img/main-index-mob@2x.jpg") type("image/jpeg"));
+    }
+  }
+}
