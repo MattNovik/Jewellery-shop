@@ -4,10 +4,220 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="theme-color" content="#ffffff">
+  <title>Jewellery</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="preload" href="fonts/cormorant-garamond-bold.woff" as="font" type="font/woff" crossorigin >
+  <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" as="font" type="font/woff2" crossorigin >
+  <link rel="preload" href="fonts/cormorant-garamond-regular.woff" as="font" type="font/woff" crossorigin >
+  <link rel="preload" href="fonts/cormorant-garamond-regular.woff2" as="font" type="font/woff2" crossorigin >
+  <link rel="preload" href="fonts/cormorant-garamond-semi-bold.woff" as="font" type="font/woff" crossorigin >
+  <link rel="preload" href="fonts/cormorant-garamond-semi-bold.woff2" as="font" type="font/woff2" crossorigin >
+  <link rel="preload" href="fonts/poppins-bold.woff" as="font" type="font/woff" crossorigin >
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-medium.woff" as="font" type="font/woff" crossorigin >
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-regular.woff" as="font" type="font/woff" crossorigin >
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+<body class="page">
+  <header class="page-header">
+    <div class="wrapper-search wrapper-search--desktop">
+      <input type="text" id="search" class="search" placeholder="Type here to search">
+      <label for="search">
+        <svg height="14" width="14" viewBox="0 0 14 14"><use xlink:href="img/sprite_auto.svg#icon-search"></use></svg>
+        </label>
+    </div>
+    <nav class="menu menu--tablet">
+      <svg height="16" width="25" viewBox="0 0 25 16"><use xlink:href="img/sprite_auto.svg#icon-hamburger"></use></svg>
+    </nav>
+    <picture>
+      <!-- 1x: 66x66; 2x: 132x132 -->
+      <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+      <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo" width="66" height="66">
+    </picture>
+    <div class="wrapper-login-busket wrapper-login-busket--tablet">
+      <a href="#" class="wrapper-login-busket__login">
+        <svg height="16" width="18" viewBox="0 0 18 16"><use xlink:href="img/sprite_auto.svg#icon-busket"></use></svg>
+      </a>
+    </div>
+    <div class="wrapper-login-busket wrapper-login-busket--desktop">
+      <a href="#" class="wrapper-login-busket__login">Login</a>
+      <a href="#" class="wrapper-login-busket__busket">Cart <span>0</span></a>
+    </div>
+    <nav class="menu menu--desktop">
+      <ul class="menu-list">
+        <li>What’s new</li>
+        <li>Chokers</li>
+        <li>Necklaces</li>
+        <li>Rings</li>
+        <li>Earrings</li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <section class="main-image">
+      <h1>PERFECTION</h1>
+      <p>made to be yours</p>
+    </section>
+    <section class="products-slider">
+      <h2>New In</h2>
+    </section>
+    <section class="blog">
+      <h2>Blog</h2>
+      <a href="#" class="blog-read-more">Read All</a>
+      <div class="wrapper-articles">
+        <article class="article article--first">
+          <div class="article__info">
+            <p>September 30, 2019</p>
+            <h3>How to care for
+              your jewellery</h3>
+            <a href="#">Read Article</a>
+          </div>
+        </article>
+        <article class="article article--second">
+          <div class="article__info">
+            <p>September 23, 2019</p>
+            <h3>Power of
+              crystals</h3>
+            <a href="#">Read Article</a>
+          </div>
+        </article>
+        <article class="article article--third">
+          <div class="article__info">
+            <p>September 16, 2019</p>
+            <h3>AW 19 trends</h3>
+            <a href="#">Read Article</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="questions">
+      <h2>Frequently asked questions</h2>
+      <ul class="wrapper-list-questions">
+        <li>
+          <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
+          <h3>What materials are the jewellery made of?</h3>
+          <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+        </li>
+        <li>
+          <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
+          <h3>Which countries do you deliver to?</h3>
+          <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+        </li>
+        <li>
+          <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
+          <h3>What are the payment methods?</h3>
+          <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+        </li>
+        <li>
+          <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
+          <h3>Can I return the jewellery if it didn’t fit me?</h3>
+          <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+        </li>
+      </ul>
+    </section>
+    <section class="inst-pictures">
+      <h2>@Chjewellery</h2>
+      <a href="#" class="follow-link">Follow Us</a>
+      <div class="wrapper-pictures">
+        <picture>
+          <!-- 1x: 230x230; 2x: 460x460 -->
+          <source srcset="img/instpics/desktop/sevens-desktop.webp 1x, img/instpics/desktop/sevens-desktop@2x.webp 2x" type="image/webp">
+          <img src="img/instpics/desktop/sevens-desktop.png" srcset="img/instpics/desktop/sevens-desktop.png 1x, img/instpics/desktop/sevens-desktop@2x.png 2x" alt="logo" width="230" height="230">
+        </picture>
+        <picture>
+          <!-- 1x: 230x150; 2x: 460x300 -->
+          <source srcset="img/instpics/desktop/first-desktop.webp 1x, img/instpics/desktop/first-desktop@2x.webp 2x" type="image/webp">
+          <img src="img/instpics/desktop/first-desktop.png" srcset="img/instpics/desktop/first-desktop.png 1x, img/instpics/desktop/first-desktop@2x.png 2x" alt="logo" width="230" height="150">
+        </picture>
+        <picture>
+          <!-- 1x: 399x412; 2x: 798x824 -->
+          <source srcset="img/instpics/desktop/second-desktop.webp 1x, img/instpics/desktop/second-desktop@2x.webp 2x" type="image/webp">
+          <img src="img/instpics/desktop/second-desktop.png" srcset="img/instpics/desktop/second-desktop.png 1x, img/instpics/desktop/second-desktop@2x.png 2x" alt="logo" width="399" height="412">
+        </picture>
+        <picture>
+          <!-- 1x: 230x230; 2x: 460x460 -->
+          <source srcset="img/instpics/desktop/third-desktop.webp 1x, img/instpics/desktop/third-desktop@2x.webp 2x" type="image/webp">
+          <img src="img/instpics/desktop/third-desktop.png" srcset="img/instpics/desktop/third-desktop.png 1x, img/instpics/desktop/third-desktop@2x.png 2x" alt="logo" width="230" height="230">
+        </picture>
+        <picture>
+          <!-- 1x: 230x150; 2x: 460x300 -->
+          <source srcset="img/instpics/desktop/fourth-desktop.webp 1x, img/instpics/desktop/fourth-desktop@2x.webp 2x" type="image/webp">
+          <img src="img/instpics/desktop/fourth-desktop.png" srcset="img/instpics/desktop/fourth-desktop.png 1x, img/instpics/desktop/fourth-desktop@2x.png 2x" alt="logo" width="230" height="150">
+        </picture>
+        <picture>
+          <!-- 1x: 230x230; 2x: 460x460 -->
+          <source srcset="img/instpics/desktop/fifth-desktop.webp 1x, img/instpics/desktop/fifth-desktop@2x.webp 2x" type="image/webp">
+          <img src="img/instpics/desktop/fifth-desktop.png" srcset="img/instpics/desktop/fifth-desktop.png 1x, img/instpics/desktop/fifth-desktop@2x.png 2x" alt="logo" width="230" height="230">
+        </picture>
+        <picture>
+          <!-- 1x: 230x150; 2x: 460x300 -->
+          <source srcset="img/instpics/desktop/six-desktop.webp 1x, img/instpics/desktop/six-desktop@2x.webp 2x" type="image/webp">
+          <img src="img/instpics/desktop/six-desktop.png" srcset="img/instpics/desktop/six-desktop.png 1x, img/instpics/desktop/six-desktop@2x.png 2x" alt="logo" width="230" height="150">
+        </picture>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="wrapper-footer-info">
+      <div class="subcription">
+        <h2>The good stuff in your inbox </h2>
+        <p>News and updates from CH. No spam, we promise.</p>
+        <form action="">
+          <input type="email" id="subcription-email" placeholder="Your E-mail">
+          <label for="subcription-email"></label>
+          <button type="submit">
+            Sign Up
+            <svg height="9" width="29" viewBox="0 0 29 9"><use xlink:href="img/sprite_auto.svg#icon-arrow"></use></svg>
+          </button>
+        </form>
+      </div>
+      <div class="footer-links">
+        <ul class="footer-links__list footer-links__list--first">
+          <li><a href="#">Ordering & Payment</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+          <li><a href="#">Delivery</a></li>
+        </ul>
+        <ul class="footer-links__list footer-links__list--second">
+          <li><a href="#">About CH</a></li>
+          <li><a href="#">Stores & Hours</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul class="footer-links__list footer-links__list--third">
+          <li>
+            <a href="#">
+              <svg height="15" width="8" viewBox="0 0 8 15"><use xlink:href="img/sprite_auto.svg#icon-facebook"></use></svg>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg height="15" width="15" viewBox="0 0 15 15"><use xlink:href="img/sprite_auto.svg#icon-inst"></use></svg>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg height="15" width="15" viewBox="0 0 15 15"><use xlink:href="img/sprite_auto.svg#icon-pint"></use></svg>
+              Pinterest
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg height="13" width="15" viewBox="0 0 15 13"><use xlink:href="img/sprite_auto.svg#icon-twit"></use></svg>
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
