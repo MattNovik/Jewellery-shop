@@ -58,6 +58,9 @@
 
   @media (max-width: $mobile-width-only) {
 
+    padding:0 15px;
+    box-sizing: border-box;
+
     p {
       font-size: 22px;
       line-height: 26px;

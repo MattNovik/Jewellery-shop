@@ -57,6 +57,17 @@
   }
 
   @media (max-width: $mobile-width-only) {
+
+    h1 {
+      font-size: 38px;
+      line-height: 49px;
+    }
+
+    p {
+      font-size: 34px;
+      line-height: 44px;
+    }
+
     background-image: url("../img/main-index-mob.jpg");
     background-image: image-set(
         url("../img/main-index-mob.webp") type("image/webp"),

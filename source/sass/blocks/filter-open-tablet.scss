@@ -18,4 +18,8 @@
     line-height: 21px;
     color: #FFFFFF;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width:290px;
+  }
 }

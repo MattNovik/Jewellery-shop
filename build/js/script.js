@@ -1,4 +1,33 @@
 'use strict';
+const questionsListElements = document.querySelectorAll('.questions__list-element');
+const filterFormElements = document.querySelectorAll('.filter-form__element');
+const filterForm = document.querySelector('.filter-form__form');
+
+if (filterForm) {
+  filterForm.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    alert('checked');
+  });
+}
+
+
+for (let i = 0; i < filterFormElements.length;i++) {
+  filterFormElements[i].addEventListener('click',(evt) => {
+    if (evt.target.tagName === 'H2' || evt.target.tagName === 'svg' || evt.target.tagName === 'use') {
+      filterFormElements[i].classList.toggle('filter-form__element--open');
+    }
+  });
+}
+
+for (let i = 0; i < questionsListElements.length;i++) {
+  questionsListElements[i].addEventListener('click',(evt) => {
+    if (evt.target.tagName === 'H3' || evt.target.tagName === 'svg' || evt.target.tagName === 'use') {
+      questionsListElements[i].classList.toggle('questions__list-element--open');
+    }
+  });
+}
+
+
 /**
  * ChiefSlider by Itchief v2.0.0 (https://github.com/itchief/ui-components/tree/master/simple-adaptive-slider)
  * Copyright 2020 - 2021 Alexander Maltsev

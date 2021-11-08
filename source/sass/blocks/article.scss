@@ -21,12 +21,35 @@
     align-items: flex-end;
     background-image: url('../../img/blog/desktop/third-desktop.jpg');
     background-repeat: no-repeat;
-    background-size:50% 100%;
+    background-size:100% 100%;
   }
 
   @media (max-width: $tablet-width) {
     &.article--third {
+      background-size:50% 100%;
       background-image: url('../../img/blog/tablet/third-tablet.jpg');
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width:290px;
+    height:512px;
+    flex-direction: column;
+    margin:0 0 40px 0;
+
+    &.article--first {
+      background-size:contain;
+    }
+
+    &.article--second {
+      justify-content: flex-end;
+      background-position: top;
+      background-size:contain;
+    }
+
+    &.article--third {
+      background-size:contain;
+      margin:0;
     }
   }
 }
@@ -103,6 +126,16 @@
 
     a {
       margin:50px 0 0 0;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width:290px;
+    height:256px;
+
+
+    p {
+      margin:49px 0 0 0;
     }
   }
 }

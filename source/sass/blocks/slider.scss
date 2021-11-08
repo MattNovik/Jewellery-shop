@@ -23,6 +23,10 @@
       display: block;
     }
   }
+
+  @media (max-width: $mobile-width-only) {
+    margin:50px 0 0 0;
+  }
 }
 
 .slider__container {
@@ -38,6 +42,12 @@
   @media (max-width: $tablet-width) {
     width:678px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width:290px;
+    min-height: 240px;
+    box-sizing: border-box;
+  }
 }
 
 .slider__wrapper {
@@ -49,6 +59,10 @@
 
   @media (max-width: $tablet-width) {
     width:678px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width:290px;
   }
 }
 
@@ -114,6 +128,18 @@
       height:340px;
     }
   }
+
+  @media (max-width: $mobile-width-only) {
+    width:130px;
+
+    img {
+      height:136px;
+    }
+
+    p:first-of-type {
+      margin:20px 0 0 0;
+    }
+  }
 }
 
 /* кнопки влево и вправо */
@@ -129,6 +155,10 @@
     width:36px;
     height:15px;
   }
+
+  @media (max-width:$mobile-width-only) {
+    display: none;
+  }
 }
 
 .slider__control_hide {
@@ -136,7 +166,11 @@
 }
 
 .slider__control[data-slide='prev'] {
-  left:calc(100vw/2 - 485px);
+  left:calc(100vw/2 - 585px);
+
+  @media (max-width: $desktop-medium-width) {
+    left:calc(100vw/2 - 475px);
+  }
 
   @media (max-width: $tablet-width) {
     left:calc(100vw/2 - 335px);
@@ -144,7 +178,11 @@
 }
 
 .slider__control[data-slide='next'] {
-  left:calc(100vw/2 + 450px);
+  left:calc(100vw/2 + 555px);
+
+  @media (max-width: $desktop-medium-width) {
+    left:calc(100vw/2 + 455px);
+  }
 
   @media (max-width: $tablet-width) {
     left:calc(100vw/2 + 310px);
@@ -187,6 +225,11 @@
 
   @media (max-width: $tablet-width) {
     width:118px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width:118px;
+    margin:40px auto 0;
   }
 }
 

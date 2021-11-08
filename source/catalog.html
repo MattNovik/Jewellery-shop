@@ -73,7 +73,7 @@
         <button class="filter-open-tablet">Filter</button>
         <section class="filter-form">
           <form action="" class="filter-form__form">
-            <div class="filter-form__products filter-form__products--open">
+            <div class="filter-form__element filter-form__element--products filter-form__element--open">
               <h2>Product</h2>
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
               <input class="visibility-hidden" type="checkbox" id="necklaces">
@@ -85,7 +85,7 @@
               <input class="visibility-hidden" type="checkbox" id="earrings">
               <label for="earrings">Earrings</label>
             </div>
-            <div class="filter-form__material">
+            <div class="filter-form__element filter-form__element--material">
               <h2>Material</h2>
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
               <input class="visibility-hidden" type="checkbox" id="gold">
@@ -93,7 +93,7 @@
               <input class="visibility-hidden" type="checkbox" id="silver">
               <label for="silver">Silver</label>
             </div>
-            <div class="filter-form__collection">
+            <div class="filter-form__element filter-form__element--collection">
               <h2>Collection</h2>
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
               <input class="visibility-hidden" type="checkbox" id="pink">
@@ -101,7 +101,7 @@
               <input class="visibility-hidden" type="checkbox" id="dreams">
               <label for="dreams">Dreams</label>
             </div>
-            <div class="filter-form__price">
+            <div class="filter-form__element filter-form__element--price">
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
               <h2>Price</h2>
               <div class="filter-form__price-line">
@@ -113,7 +113,7 @@
               </div>
             </div>
             <button type="submit" class="filter-form__submit">Apply</button>
-            <button class="filter-form__reset">Clear All</button>
+            <button type="reset" class="filter-form__reset">Clear All</button>
           </form>
         </section>
         <section class="products">
@@ -300,5 +300,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

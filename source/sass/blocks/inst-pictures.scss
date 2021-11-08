@@ -32,6 +32,13 @@
     width:678px;
     margin:84px auto 80px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width:320px;
+    padding:0 15px;
+    margin:70px auto 71px;
+    box-sizing: border-box;
+  }
 }
 
 .inst-pictures__follow-link {

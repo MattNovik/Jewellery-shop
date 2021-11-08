@@ -12,4 +12,10 @@
     width:678px;
     flex-direction: column;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width:320px;
+    padding:0 15px;
+    box-sizing: border-box;
+  }
 }

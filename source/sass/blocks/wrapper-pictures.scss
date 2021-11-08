@@ -21,6 +21,17 @@
     row-gap: 20px;
     column-gap: 16px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    grid-template-columns: 133px 133px;
+    grid-template-rows: 133px 87px 87px;
+    grid-template-areas:
+    'first second'
+    'third second'
+    'six sevens';
+    row-gap: 27px;
+    column-gap: 24px;
+  }
 }
 
 .wrapper-pictures__pic {
@@ -49,5 +60,17 @@
   }
   &.wrapper-pictures__pic--sevens {
     grid-area: sevens;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    img {
+      object-fit: cover;
+    }
+    &.wrapper-pictures__pic--fourth {
+      display: none;
+    }
+    &.wrapper-pictures__pic--fifth {
+      display: none;
+    }
   }
 }
