@@ -94,4 +94,12 @@
       stroke:$second;
     }
   }
+
+  @media (max-width: $desktop-medium-width) {
+    min-width:420px;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width:560px;
+  }
 }

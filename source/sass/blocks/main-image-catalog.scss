@@ -1,0 +1,78 @@
+.main-image-catalog {
+  width:100%;
+  min-height:261px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/main-catalog-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: image-set(
+        url("../img/main-catalog-desktop.webp") type("image/webp"),
+        url("../img/main-catalog-desktop.jpg") type("image/jpeg"));
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-catalog-desktop@2x.jpg");
+    background-image: image-set(
+        url("../img/main-catalog-desktop@2x.webp") type("image/webp"),
+        url("../img/main-catalog-desktop@2x.jpg") type("image/jpeg"));
+  }
+
+  h1 {
+    font-family: $cormorant;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: 0.03em;
+    color:#fff;
+    margin:0;
+  }
+
+  p {
+    margin:20px 0 0 0;
+    font-family: $cormorant;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 29px;
+    text-align: center;
+    color:#fff;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 261px;
+    background-image: url("../img/main-catalog-tablet.jpg");
+    background-image: image-set(
+        url("../img/main-catalog-tablet.webp") type("image/webp"),
+        url("../img/main-catalog-tablet.jpg") type("image/jpeg"));
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-catalog-tablet@2x.jpg");
+      background-image: image-set(
+          url("../img/main-catalog-tablet@2x.webp") type("image/webp"),
+          url("../img/main-catalog-tablet@2x.jpg") type("image/jpeg"));
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+
+    p {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    background-image: url("../img/main-catalog-mob.jpg");
+    background-image: image-set(
+        url("../img/main-catalog-mob.webp") type("image/webp"),
+        url("../img/main-catalog-mob.jpg") type("image/jpeg"));
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-catalog-mob@2x.jpg");
+      background-image: image-set(
+          url("../img/main-catalog-mob@2x.webp") type("image/webp"),
+          url("../img/main-catalog-mob@2x.jpg") type("image/jpeg"));
+    }
+  }
+}

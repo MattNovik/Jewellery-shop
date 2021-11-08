@@ -1,0 +1,21 @@
+.filter-open-tablet {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:68px;
+    width:678px;
+    padding:0;
+    background: $second;
+    border: 1px solid $second;
+    box-sizing: border-box;
+    font-family: $poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+  }
+}

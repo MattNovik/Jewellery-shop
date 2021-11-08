@@ -6,7 +6,10 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-  new ChiefSlider('.slider');
+  new ChiefSlider('#slider');
+});
+document.addEventListener('DOMContentLoaded', function() {
+  new ChiefSlider('#slider-mob');
 });
  (function() {
   if (typeof window.CustomEvent === 'function' ) return false;

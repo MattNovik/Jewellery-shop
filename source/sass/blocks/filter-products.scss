@@ -1,8 +1,8 @@
-.wrapper-footer-info {
+.filter-products {
   width:1170px;
   display: flex;
-  justify-content: space-between;
-  margin:100px auto;
+  margin:0 auto;
+  padding:0 0 40px 0;
 
   @media (max-width: $desktop-medium-width) {
     width:970px;
@@ -11,6 +11,5 @@
   @media (max-width: $tablet-width) {
     width:678px;
     flex-direction: column;
-    margin:60px auto;
   }
 }

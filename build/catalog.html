@@ -26,31 +26,35 @@
 </head>
 <body class="page">
   <header class="page-header">
-    <div class="wrapper-search wrapper-search--desktop">
-      <input type="text" id="search" class="search" placeholder="Type here to search">
-      <label for="search">
-        <svg height="14" width="14" viewBox="0 0 14 14"><use xlink:href="img/sprite_auto.svg#icon-search"></use></svg>
-        </label>
-    </div>
-    <nav class="menu menu--tablet">
-      <svg height="16" width="25" viewBox="0 0 25 16"><use xlink:href="img/sprite_auto.svg#icon-hamburger"></use></svg>
-    </nav>
-    <picture>
-      <!-- 1x: 66x66; 2x: 132x132 -->
-      <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
-      <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo" width="66" height="66">
-    </picture>
-    <div class="wrapper-login-busket wrapper-login-busket--tablet">
-      <a href="#" class="wrapper-login-busket__login">
-        <svg height="16" width="18" viewBox="0 0 18 16"><use xlink:href="img/sprite_auto.svg#icon-busket"></use></svg>
-      </a>
-    </div>
-    <div class="wrapper-login-busket wrapper-login-busket--desktop">
-      <a href="#" class="wrapper-login-busket__login">Login</a>
-      <a href="#" class="wrapper-login-busket__busket">Cart <span>0</span></a>
+    <div class="wrapper-page-header-top">
+      <div class="page-header__top">
+        <div class="wrapper-search wrapper-search--desktop">
+          <input type="text" id="search" class="search" placeholder="Type here to search">
+          <label for="search">
+            <svg height="14" width="14" viewBox="0 0 14 14"><use xlink:href="img/sprite_auto.svg#icon-search"></use></svg>
+            </label>
+        </div>
+        <nav class="menu menu--tablet">
+          <svg height="18" width="25" viewBox="0 0 25 18"><use xlink:href="img/sprite_auto.svg#icon-hamburger"></use></svg>
+        </nav>
+        <picture>
+          <!-- 1x: 66x66; 2x: 132x132 -->
+          <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+          <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo" width="66" height="66">
+        </picture>
+        <div class="wrapper-login-busket wrapper-login-busket--tablet">
+          <a href="#" class="wrapper-login-busket__login">
+            <svg height="18" width="20" viewBox="0 0 20 18"><use xlink:href="img/sprite_auto.svg#icon-busket"></use></svg>
+          </a>
+        </div>
+        <div class="wrapper-login-busket wrapper-login-busket--desktop">
+          <a href="#" class="wrapper-login-busket__login">Login</a>
+          <a href="#" class="wrapper-login-busket__busket">Cart <span>0</span></a>
+        </div>
+      </div>
     </div>
     <nav class="menu menu--desktop">
-      <ul class="menu-list">
+      <ul class="menu__list">
         <li><a href="#">What’s new</a></li>
         <li><a href="#">Chokers</a></li>
         <li><a href="#">Necklaces</a></li>
@@ -65,188 +69,192 @@
       <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
     </section>
     <div class="wrapper-filter-products">
-      <button class="filter-open-tablet">Filter</button>
-      <section class="filter-form">
-        <form action="">
-          <div class="filter-form__products filter-form__products--open">
-            <h2>Product</h2>
-            <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
-            <input type="checkbox" id="necklaces">
-            <label for="necklaces">Necklaces</label>
-            <input type="checkbox" id="chokers">
-            <label for="chokers">Chokers</label>
-            <input type="checkbox" id="rings">
-            <label for="rings">Rings</label>
-            <input type="checkbox" id="earrings">
-            <label for="earrings">Earrings</label>
-          </div>
-          <div class="filter-form__material">
-            <h2>Material</h2>
-            <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
-            <input type="checkbox" id="necklaces">
-            <label for="necklaces">Necklaces</label>
-            <input type="checkbox" id="chokers">
-            <label for="chokers">Chokers</label>
-            <input type="checkbox" id="rings">
-            <label for="rings">Rings</label>
-            <input type="checkbox" id="earrings">
-            <label for="earrings">Earrings</label>
-          </div>
-          <div class="filter-form__collection">
-            <h2>Collection</h2>
-            <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
-            <input type="checkbox" id="necklaces">
-            <label for="necklaces">Necklaces</label>
-            <input type="checkbox" id="chokers">
-            <label for="chokers">Chokers</label>
-            <input type="checkbox" id="rings">
-            <label for="rings">Rings</label>
-            <input type="checkbox" id="earrings">
-            <label for="earrings">Earrings</label>
-          </div>
-          <div class="filter-form__price">
-            <h2>Price</h2>
-          </div>
-          <button type="submit" class="filter-form__submit">Apply</button>
-          <button class="form-reset">Clear All</button>
-        </form>
-      </section>
-      <section class="products">
-        <ul class="products__list">
-          <li>
-            <picture>
-              <!-- 1x: 270x272; 2x: 540x544 -->
-              <source srcset="img/products/desktop/double-pearl-earrings.webp 1x, img/products/desktop/double-pearl-earrings@2x.webp 2x" type="image/webp">
-              <img src="img/products/desktop/double-pearl-earrings.jpg" srcset="img/products/desktop/double-pearl-earrings.jpg 1x, img/products/desktop/double-pearl-earrings@2x.jpg 2x" alt="pearl" width="270" height="272">
-            </picture>
-            <p>Double pearl earrings </p>
-            <p>$ 115</p>
-          </li>
-          <li>
-            <picture>
-              <!-- 1x: 270x272; 2x: 540x544 -->
-              <source srcset="img/products/desktop/black-choker-gold-bead.webp 1x, img/products/desktop/black-choker-gold-bead@2x.webp 2x" type="image/webp">
-              <img src="img/products/desktop/black-choker-gold-bead.jpg" srcset="img/products/desktop/black-choker-gold-bead.jpg 1x, img/products/desktop/black-choker-gold-bead@2x.jpg 2x" alt="pearl" width="270" height="272">
-            </picture>
-            <p>Choker with gold bead </p>
-            <p>$ 55</p>
-          </li>
-          <li>
-            <picture>
-              <!-- 1x: 270x272; 2x: 540x544 -->
-              <source srcset="img/products/desktop/gold-layered-necklace.webp 1x, img/products/desktop/gold-layered-necklace@2x.webp 2x" type="image/webp">
-              <img src="img/products/desktop/gold-layered-necklace.jpg" srcset="img/products/desktop/gold-layered-necklace.jpg 1x, img/products/desktop/gold-layered-necklace@2x.jpg 2x" alt="pearl" width="270" height="272">
-            </picture>
-            <p>Gold layered necklace </p>
-            <p>$ 155</p>
-          </li>
-          <li>
-            <picture>
-              <!-- 1x: 270x272; 2x: 540x544 -->
-              <source srcset="img/products/desktop/blue-gemstone-pendant.webp 1x, img/products/desktop/blue-gemstone-pendant@2x.webp 2x" type="image/webp">
-              <img src="img/products/desktop/blue-gemstone-pendant.jpg" srcset="img/products/desktop/blue-gemstone-pendant.jpg 1x, img/products/desktop/blue-gemstone-pendant@2x.jpg 2x" alt="pearl" width="270" height="272">
-            </picture>
-            <p>Blue gemstone pendant</p>
-            <p>$ 105</p>
-          </li>
-          <li>
-            <picture>
-              <!-- 1x: 270x272; 2x: 540x544 -->
-              <source srcset="img/products/desktop/boho-earrings.webp 1x, img/products/desktop/boho-earrings@2x.webp 2x" type="image/webp">
-              <img src="img/products/desktop/boho-earrings.jpg" srcset="img/products/desktop/boho-earrings.jpg 1x, img/products/desktop/boho-earrings@2x.jpg 2x" alt="pearl" width="270" height="272">
-            </picture>
-            <p>Boho earrings</p>
-            <p>$ 75</p>
-          </li>
-          <li>
-            <picture>
-              <!-- 1x: 270x272; 2x: 540x544 -->
-              <source srcset="img/products/desktop/bird-necklace.webp 1x, img/products/desktop/bird-necklace@2x.webp 2x" type="image/webp">
-              <img src="img/products/desktop/bird-necklace.jpg" srcset="img/products/desktop/bird-necklace.jpg 1x, img/products/desktop/bird-necklace@2x.jpg 2x" alt="pearl" width="270" height="272">
-            </picture>
-            <p>Gold bird necklace</p>
-            <p>$ 135</p>
-          </li>
-          <li>
-            <picture>
-              <!-- 1x: 270x272; 2x: 540x544 -->
-              <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
-              <img src="img/products/desktop/black-leather-choker-necklace.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="pearl" width="270" height="272">
-            </picture>
-            <p>Black leather choker</p>
-            <p>$ 85</p>
-          </li>
-          <li>
-            <picture>
-              <!-- 1x: 270x272; 2x: 540x544 -->
-              <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
-              <img src="img/products/desktop/purple-gemstone-necklace.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="pearl" width="270" height="272">
-            </picture>
-            <p>Necklace with amethyst</p>
-            <p>$ 145</p>
-          </li>
-          <li>
-            <picture>
-              <!-- 1x: 270x272; 2x: 540x544 -->
-              <source srcset="img/products/desktop/elephant-earrings.webp 1x, img/products/desktop/elephant-earrings@2x.webp 2x" type="image/webp">
-              <img src="img/products/desktop/elephant-earrings.jpg" srcset="img/products/desktop/elephant-earrings.jpg 1x, img/products/desktop/elephant-earrings@2x.jpg 2x" alt="pearl" width="270" height="272">
-            </picture>
-            <p>Elephant earrings</p>
-            <p>$ 95</p>
-          </li>
-          <li>
-            <picture>
-              <!-- 1x: 270x272; 2x: 540x544 -->
-              <source srcset="img/products/desktop/threader-necklace-closeup.webp 1x, img/products/desktop/threader-necklace-closeup@2x.webp 2x" type="image/webp">
-              <img src="img/products/desktop/threader-necklace-closeup.jpg" srcset="img/products/desktop/threader-necklace-closeup.jpg 1x, img/products/desktop/threader-necklace-closeup@2x.jpg 2x" alt="pearl" width="270" height="272">
-            </picture>
-            <p>Threader necklace</p>
-            <p>$ 115</p>
-          </li>
-          <li>
-            <picture>
-              <!-- 1x: 270x272; 2x: 540x544 -->
-              <source srcset="img/products/desktop/origami-crane-necklace.webp 1x, img/products/desktop/origami-crane-necklace@2x.webp 2x" type="image/webp">
-              <img src="img/products/desktop/origami-crane-necklace.jpg" srcset="img/products/desktop/origami-crane-necklace.jpg 1x, img/products/desktop/origami-crane-necklace@2x.jpg 2x" alt="pearl" width="270" height="272">
-            </picture>
-            <p>Origami crane necklace</p>
-            <p>$ 105</p>
-          </li>
-          <li>
-            <picture>
-              <!-- 1x: 270x272; 2x: 540x544 -->
-              <source srcset="img/products/desktop/marble-earrings.webp 1x, img/products/desktop/marble-earrings@2x.webp 2x" type="image/webp">
-              <img src="img/products/desktop/marble-earrings.jpg" srcset="img/products/desktop/marble-earrings.jpg 1x, img/products/desktop/marble-earrings@2x.jpg 2x" alt="pearl" width="270" height="272">
-            </picture>
-            <p>Marble earrings</p>
-            <p>$ 95</p>
-          </li>
-        </ul>
-        <div class="wrapper-pages">
-          <button class="wrapper-pages__previous">Previous</button>
-          <ul class="wrapper-pages__list">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>3</li>
-            <li>5</li>
+      <div class="filter-products">
+        <button class="filter-open-tablet">Filter</button>
+        <section class="filter-form">
+          <form action="" class="filter-form__form">
+            <div class="filter-form__products filter-form__products--open">
+              <h2>Product</h2>
+              <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
+              <input class="visibility-hidden" type="checkbox" id="necklaces">
+              <label for="necklaces">Necklaces</label>
+              <input class="visibility-hidden" type="checkbox" id="chokers">
+              <label for="chokers">Chokers</label>
+              <input class="visibility-hidden" type="checkbox" id="rings">
+              <label for="rings">Rings</label>
+              <input class="visibility-hidden" type="checkbox" id="earrings">
+              <label for="earrings">Earrings</label>
+            </div>
+            <div class="filter-form__material">
+              <h2>Material</h2>
+              <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
+              <input class="visibility-hidden" type="checkbox" id="gold">
+              <label for="gold">Gold</label>
+              <input class="visibility-hidden" type="checkbox" id="silver">
+              <label for="silver">Silver</label>
+            </div>
+            <div class="filter-form__collection">
+              <h2>Collection</h2>
+              <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
+              <input class="visibility-hidden" type="checkbox" id="pink">
+              <label for="pink">Pink</label>
+              <input class="visibility-hidden" type="checkbox" id="dreams">
+              <label for="dreams">Dreams</label>
+            </div>
+            <div class="filter-form__price">
+              <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
+              <h2>Price</h2>
+              <div class="filter-form__price-line">
+                <div class="filter-form__price-second-line"></div>
+              </div>
+              <div class="filter-form__price-numbers">
+                <p>$ 55</p>
+                <p>$ 155</p>
+              </div>
+            </div>
+            <button type="submit" class="filter-form__submit">Apply</button>
+            <button class="filter-form__reset">Clear All</button>
+          </form>
+        </section>
+        <section class="products">
+          <ul class="products__list">
+            <li class="products__list-element">
+              <picture>
+                <!-- 1x: 270x272; 2x: 540x544 -->
+                <source srcset="img/products/desktop/double-pearl-earrings.webp 1x, img/products/desktop/double-pearl-earrings@2x.webp 2x" type="image/webp">
+                <img src="img/products/desktop/double-pearl-earrings.jpg" srcset="img/products/desktop/double-pearl-earrings.jpg 1x, img/products/desktop/double-pearl-earrings@2x.jpg 2x" alt="pearl" width="270" height="272">
+              </picture>
+              <p>Double pearl earrings </p>
+              <p>$ 115</p>
+            </li>
+            <li class="products__list-element">
+              <picture>
+                <!-- 1x: 270x272; 2x: 540x544 -->
+                <source srcset="img/products/desktop/black-choker-gold-bead.webp 1x, img/products/desktop/black-choker-gold-bead@2x.webp 2x" type="image/webp">
+                <img src="img/products/desktop/black-choker-gold-bead.jpg" srcset="img/products/desktop/black-choker-gold-bead.jpg 1x, img/products/desktop/black-choker-gold-bead@2x.jpg 2x" alt="pearl" width="270" height="272">
+              </picture>
+              <p>Choker with gold bead </p>
+              <p>$ 55</p>
+            </li>
+            <li class="products__list-element">
+              <picture>
+                <!-- 1x: 270x272; 2x: 540x544 -->
+                <source srcset="img/products/desktop/gold-layered-necklace.webp 1x, img/products/desktop/gold-layered-necklace@2x.webp 2x" type="image/webp">
+                <img src="img/products/desktop/gold-layered-necklace.jpg" srcset="img/products/desktop/gold-layered-necklace.jpg 1x, img/products/desktop/gold-layered-necklace@2x.jpg 2x" alt="pearl" width="270" height="272">
+              </picture>
+              <p>Gold layered necklace </p>
+              <p>$ 155</p>
+            </li>
+            <li class="products__list-element">
+              <picture>
+                <!-- 1x: 270x272; 2x: 540x544 -->
+                <source srcset="img/products/desktop/blue-gemstone-pendant.webp 1x, img/products/desktop/blue-gemstone-pendant@2x.webp 2x" type="image/webp">
+                <img src="img/products/desktop/blue-gemstone-pendant.jpg" srcset="img/products/desktop/blue-gemstone-pendant.jpg 1x, img/products/desktop/blue-gemstone-pendant@2x.jpg 2x" alt="pearl" width="270" height="272">
+              </picture>
+              <p>Blue gemstone pendant</p>
+              <p>$ 105</p>
+            </li>
+            <li class="products__list-element">
+              <picture>
+                <!-- 1x: 270x272; 2x: 540x544 -->
+                <source srcset="img/products/desktop/boho-earrings.webp 1x, img/products/desktop/boho-earrings@2x.webp 2x" type="image/webp">
+                <img src="img/products/desktop/boho-earrings.jpg" srcset="img/products/desktop/boho-earrings.jpg 1x, img/products/desktop/boho-earrings@2x.jpg 2x" alt="pearl" width="270" height="272">
+              </picture>
+              <p>Boho earrings</p>
+              <p>$ 75</p>
+            </li>
+            <li class="products__list-element">
+              <picture>
+                <!-- 1x: 270x272; 2x: 540x544 -->
+                <source srcset="img/products/desktop/bird-necklace.webp 1x, img/products/desktop/bird-necklace@2x.webp 2x" type="image/webp">
+                <img src="img/products/desktop/bird-necklace.jpg" srcset="img/products/desktop/bird-necklace.jpg 1x, img/products/desktop/bird-necklace@2x.jpg 2x" alt="pearl" width="270" height="272">
+              </picture>
+              <p>Gold bird necklace</p>
+              <p>$ 135</p>
+            </li>
+            <li class="products__list-element">
+              <picture>
+                <!-- 1x: 270x272; 2x: 540x544 -->
+                <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
+                <img src="img/products/desktop/black-leather-choker-necklace.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="pearl" width="270" height="272">
+              </picture>
+              <p>Black leather choker</p>
+              <p>$ 85</p>
+            </li>
+            <li class="products__list-element">
+              <picture>
+                <!-- 1x: 270x272; 2x: 540x544 -->
+                <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
+                <img src="img/products/desktop/purple-gemstone-necklace.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="pearl" width="270" height="272">
+              </picture>
+              <p>Necklace with amethyst</p>
+              <p>$ 145</p>
+            </li>
+            <li class="products__list-element">
+              <picture>
+                <!-- 1x: 270x272; 2x: 540x544 -->
+                <source srcset="img/products/desktop/elephant-earrings.webp 1x, img/products/desktop/elephant-earrings@2x.webp 2x" type="image/webp">
+                <img src="img/products/desktop/elephant-earrings.jpg" srcset="img/products/desktop/elephant-earrings.jpg 1x, img/products/desktop/elephant-earrings@2x.jpg 2x" alt="pearl" width="270" height="272">
+              </picture>
+              <p>Elephant earrings</p>
+              <p>$ 95</p>
+            </li>
+            <li class="products__list-element">
+              <picture>
+                <!-- 1x: 270x272; 2x: 540x544 -->
+                <source srcset="img/products/desktop/threader-necklace-closeup.webp 1x, img/products/desktop/threader-necklace-closeup@2x.webp 2x" type="image/webp">
+                <img src="img/products/desktop/threader-necklace-closeup.jpg" srcset="img/products/desktop/threader-necklace-closeup.jpg 1x, img/products/desktop/threader-necklace-closeup@2x.jpg 2x" alt="pearl" width="270" height="272">
+              </picture>
+              <p>Threader necklace</p>
+              <p>$ 115</p>
+            </li>
+            <li class="products__list-element">
+              <picture>
+                <!-- 1x: 270x272; 2x: 540x544 -->
+                <source srcset="img/products/desktop/origami-crane-necklace.webp 1x, img/products/desktop/origami-crane-necklace@2x.webp 2x" type="image/webp">
+                <img src="img/products/desktop/origami-crane-necklace.jpg" srcset="img/products/desktop/origami-crane-necklace.jpg 1x, img/products/desktop/origami-crane-necklace@2x.jpg 2x" alt="pearl" width="270" height="272">
+              </picture>
+              <p>Origami crane necklace</p>
+              <p>$ 105</p>
+            </li>
+            <li class="products__list-element">
+              <picture>
+                <!-- 1x: 270x272; 2x: 540x544 -->
+                <source srcset="img/products/desktop/marble-earrings.webp 1x, img/products/desktop/marble-earrings@2x.webp 2x" type="image/webp">
+                <img src="img/products/desktop/marble-earrings.jpg" srcset="img/products/desktop/marble-earrings.jpg 1x, img/products/desktop/marble-earrings@2x.jpg 2x" alt="pearl" width="270" height="272">
+              </picture>
+              <p>Marble earrings</p>
+              <p>$ 95</p>
+            </li>
           </ul>
-          <button class="wrapper-pages__next">Next</button>
+        </section>
+      </div>
+      <div class="wrapper-pages">
+        <div class="pages">
+          <button class="pages__previous">Previous</button>
+          <ul class="pages__list">
+            <li class="pages__list-element pages__list-element--active">1</li>
+            <li class="pages__list-element">2</li>
+            <li class="pages__list-element">3</li>
+            <li class="pages__list-element">4</li>
+            <li class="pages__list-element">5</li>
+          </ul>
+          <button class="pages__next">Next</button>
         </div>
-      </section>
+      </div>
     </div>
   </main>
   <footer class="page-footer">
     <div class="wrapper-footer-info">
-      <div class="subcription">
+      <div class="subscription">
         <h2>The good stuff in your inbox </h2>
         <p>News and updates from CH. No spam, we promise.</p>
-        <form action="">
+        <form action="" class="subscription__form">
           <input type="email" id="subcription-email" placeholder="Your E-mail">
           <label for="subcription-email"></label>
           <button type="submit">
             Sign Up
-            <svg height="9" width="29" viewBox="0 0 29 9"><use xlink:href="img/sprite_auto.svg#icon-arrow"></use></svg>
+            <svg height="11" width="29" viewBox="0 0 29 11"><use xlink:href="img/sprite_auto.svg#icon-arrow"></use></svg>
           </button>
         </form>
       </div>

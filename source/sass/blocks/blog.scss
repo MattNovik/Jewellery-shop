@@ -12,6 +12,10 @@
     color: $text-dark;
     text-align: center;
   }
+
+  @media(max-width: $tablet-width) {
+    margin:80px auto 0;
+  }
 }
 
 .blog__read-more-link {

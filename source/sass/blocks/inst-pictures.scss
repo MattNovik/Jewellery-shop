@@ -1,7 +1,7 @@
 .inst-pictures {
   width:1170px;
   text-align: center;
-  margin:108px auto 0;
+  margin:108px auto 130px;
 
   h2 {
     font-family: $cormorant;
@@ -22,6 +22,15 @@
       letter-spacing: 0.03em;
       color: #000000;
     }
+  }
+
+  @media (max-width: $desktop-medium-width) {
+    width:970px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width:678px;
+    margin:84px auto 80px;
   }
 }
 

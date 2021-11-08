@@ -12,6 +12,10 @@
     line-height: 44px;
     color: $text-dark;
   }
+
+  @media (max-width:$tablet-width) {
+    margin:80px auto 0;
+  }
 }
 
 .products-slider__link {
