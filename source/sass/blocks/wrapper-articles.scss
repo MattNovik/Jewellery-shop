@@ -1,0 +1,12 @@
+.wrapper-articles {
+  width:1170px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  'first third'
+  'second third';
+  row-gap:30px;
+  column-gap: 30px;
+  margin:70px auto 0;
+}

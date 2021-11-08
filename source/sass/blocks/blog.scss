@@ -1,0 +1,36 @@
+.blog {
+  margin:130px auto 0;
+  text-align: center;
+
+  h2 {
+    font-family: $cormorant;
+    font-style: normal;
+    font-weight:700;
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: 0.03em;
+    color: $text-dark;
+    text-align: center;
+  }
+}
+
+.blog__read-more-link {
+  position: relative;
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $text-dark;
+  text-decoration:none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom:-10px;
+    left:0;
+    width:64px;
+    height:1px;
+    background-color: $second;
+  }
+}

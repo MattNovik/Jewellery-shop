@@ -1,0 +1,45 @@
+.footer-links {
+  display: flex;
+  width:582px;
+  justify-content: space-between;
+}
+
+.footer-links__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:0;
+  margin:0;
+  list-style-type: none;
+
+  li {
+    a {
+      font-family: $poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color:$second;
+    }
+  }
+
+  &.footer-links__list--third {
+    svg {
+      width:15px;
+      fill:#fff;
+      margin:0 15px 0 0;
+    }
+
+    a:hover {
+      svg  {
+        fill:$second;
+        color:$second;
+      }
+    }
+  }
+}
