@@ -63,7 +63,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    right:7px;
+    right:15px;
     box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
   }
 }
@@ -85,7 +85,7 @@
   border-left:solid 1px $second;
   border-right:solid 1px $second;
   border-bottom:solid 1px $second;
-  padding:28px 25px 27px;
+  padding:22px 25px 22px;
   box-sizing: border-box;
 
   label {
@@ -93,7 +93,7 @@
     word-wrap:break-word;
     max-width: max-content;
     position: relative;
-    margin:18px 0 0 35px;
+    margin:12px 0 0 33px;
     font-family: $poppins;
     font-style: normal;
     font-weight: 500;
@@ -121,12 +121,12 @@
   }
 
   label:first-of-type {
-    margin:30px 0 0 35px;
+    margin:22px 0 0 33px;
   }
 
   svg {
     position: absolute;
-    top:33px;
+    top:28px;
     right:25px;
     fill:transparent;
     stroke:$second;
@@ -147,7 +147,7 @@
 
   &.filter-form__element--products {
     border-top:solid 1px $second;
-    padding:28px 25px 29px;
+    padding:24px 25px 29px;
     box-sizing: border-box;
   }
 
@@ -170,39 +170,56 @@
   @media (max-width: $tablet-width) {
     border-right:none;
     border-left:0;
-    padding:40px 21px 40px;
+    padding:35px 21px 33px;
 
+    h2 {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    label {
+      font-size: 16px;
+      line-height: 21px;
+      margin:17px 0 0 40px;
+
+      &:before {
+        left:-30px;
+      }
+    }
     svg {
       top:40px;
       right:40px;
-      width:20px;
+      width:23px;
       height:12px;
     }
 
     &.filter-form__element--products {
-      padding:40px 21px 40px;
+      padding:35px 21px 36px;
       border-top:none;
     }
 
-    label {
-      margin:20px 0 0 31px;
-    }
 
     label:first-of-type {
-      margin:30px 0 0 31px;
+      margin:24px 0 0 40px;
     }
   }
 
   @media (max-width: $mobile-width-only) {
-    padding:30px 20px;
+    padding:23px 18px 25px 18px;
 
     svg {
       top:31px;
       right:20px;
     }
 
+    label {
+      &:before {
+        top:3px;
+      }
+    }
+
     &.filter-form__element--products {
-      padding:30px 20px;
+      padding:23px 18px 28px 18px;
       border-top:none;
     }
 
@@ -223,11 +240,11 @@
   cursor: pointer;
 
   @media (max-width: $tablet-width) {
-    margin:35px 40px 0 21px;
+    margin:42px 40px 0 21px;
   }
 
   @media (max-width: $mobile-width-only) {
-    margin:35px 20px 0 20px;
+    margin:31px 20px 0 20px;
   }
 }
 
@@ -245,7 +262,7 @@
   cursor: pointer;
 
   @media (max-width: $tablet-width) {
-    margin:35px 40px 0 21px;
+    margin:25px 40px 0 21px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -259,14 +276,16 @@
   width:100%;
   height:1px;
   background-color: #F0EAE4;
-  margin:32px 0 0 0;
+  margin:26px 0 0 0;
 
   @media (max-width:$tablet-width) {
     width:304px;
+    margin:32px 0 0 11px;
   }
 
   @media (max-width:$mobile-width-only) {
     width:210px;
+    margin:34px 0 0 11px;
   }
 }
 
@@ -302,12 +321,21 @@
   }
 
   @media (max-width: $tablet-width) {
-    width:158px;
+    width:162px;
+
+    &:before {
+      width:18px;
+      height:18px;
+    }
+    &:after {
+      width:18px;
+      height:18px;
+    }
   }
 
   @media (max-width:$mobile-width-only) {
-    width:120px;
-    left:40px;
+    width:125px;
+    left:34px;
   }
 }
 
@@ -315,7 +343,7 @@
   display: none;
   justify-content: space-between;
   padding:0 25px 0 38px;
-  margin:17px 0 0 0;
+  margin:12px 0 0 0;
 
   p {
     font-family: $poppins;
@@ -328,10 +356,16 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding:0 140px 0 38px;
+    margin:14px 0 0 0;
+    padding:0 120px 0 46px;
+
+    p {
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 
   @media (max-width: $mobile-width-only) {
-    padding:0 45px 0 20px;
+    padding:0 39px 0 20px;
   }
 }

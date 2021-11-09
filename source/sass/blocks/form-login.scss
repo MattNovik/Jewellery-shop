@@ -7,7 +7,7 @@
   right:calc(50% - 215px);
   width:430px;
   height:auto;
-  max-height: calc(100vh - 140px);
+  max-height: calc(100vh - 90px);
   z-index: 10;
   overflow-y:auto;
   background: #F0EAE4;
@@ -20,7 +20,7 @@
     font-size: 34px;
     line-height: 44px;
     color: $text-dark;
-    margin:60px 0 0 0;
+    margin:50px 0 0 0;
   }
 
   &.form-login--close {
@@ -29,16 +29,18 @@
 
   @media (max-width: $tablet-width) {
     width:442px;
+    top:80px;
     right:calc(50% - 221px);
   }
 
   @media (max-width:$mobile-width-only) {
     width:270px;
+    top:50px;
     min-height:470px;
     right:calc(50% - 135px);
 
     h3 {
-      margin:45px 0 0 0;
+      margin:37px 0 0 0;
       font-size: 24px;
       line-height: 130%;
     }
@@ -47,8 +49,8 @@
 
 .form-login__close {
   position: absolute;
-  top:20px;
-  right:20px;
+  top:16px;
+  right:16px;
   background: transparent;
   width:20px;
   height:20px;
@@ -80,6 +82,30 @@
   background: #000;
   transform: rotate(-45deg);
   }
+
+  @media (max-width: $tablet-width) {
+    top:18px;
+    right:22px;
+
+    &::before {
+      width:24px;
+    }
+    &::after {
+      width:24px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    top:12px;
+    right:12px;
+
+    &::before {
+      width:20px;
+    }
+    &::after {
+      width:20px;
+    }
+  }
 }
 
 .form-login__image {
@@ -97,7 +123,7 @@
 .form-login__form {
   display: flex;
   flex-direction: column;
-  margin:45px 45px 60px;
+  margin:32px 45px 55px;
 
   input {
     width:340px;
@@ -126,7 +152,7 @@
   }
 
   input:first-of-type {
-    margin:0 0 40px 0;
+    margin:0 0 35px 0;
   }
 
   input:focus{
@@ -139,7 +165,7 @@
     background-color: $second;
     border: 1px solid $second;
     box-sizing: border-box;
-    margin:50px auto 0;
+    margin:45px auto 0;
     padding:0;
     font-family: $poppins;
     font-style: normal;
@@ -159,7 +185,7 @@
     line-height: 21px;
     color: #9B9997;
     text-align: center;
-    margin:20px;
+    margin:15px 0 0 -5px;
 
     a {
       font-family: $poppins;
@@ -181,22 +207,27 @@
     color: #9B9997;
     text-decoration: none;
     text-align: right;
-    margin:10px 0 0 0;
+    margin:6px 0 0 0;
   }
 
   @media (max-width: $tablet-width) {
-    margin:50px 51px 60px;
+    margin:32px 51px 55px;
   }
 
   @media (max-width: $mobile-width-only) {
-    margin:40px 15px 45px;
+    margin:27px 15px 40px;
 
     button {
       width:240px;
+      margin:35px auto 0;
     }
 
     input {
       width:240px;
+    }
+
+    input:first-of-type {
+      margin:0 0 30px 0;
     }
   }
 }

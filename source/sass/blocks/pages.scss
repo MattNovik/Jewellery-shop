@@ -2,7 +2,7 @@
   width:1170px;
   display: flex;
   justify-content: space-between;
-  margin:40px auto 0;
+  margin:35px auto 0;
   padding:0 0 0 300px;
   box-sizing: border-box;
 
@@ -16,6 +16,7 @@
     line-height: 21px;
     color: $text-dark;
     cursor: pointer;
+    padding: 0;
   }
 
   @media (max-width: $desktop-medium-width) {
@@ -31,7 +32,7 @@
     width:320px;
     justify-content: center;
     padding:0 15px;
-    margin:50px auto 0;
+    margin:40px auto 0;
     box-sizing: border-box;
 
     button {
@@ -45,8 +46,13 @@
   display: flex;
   justify-content: space-between;
   list-style-type:none;
-  margin:0;
+  margin:0 0 0 -35px;
   padding:0;
+
+  @media (max-width:$mobile-width-only) {
+    width:136px;
+    margin:0 0 0 0;
+  }
 }
 
 .pages__list-element {
