@@ -1,12 +1,12 @@
 .wrapper-login-busket {
   min-width:205px;
+  max-width:205px;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   margin:17px 0 0 0;
 
-  a:first-child {
-    margin:0 35px 0;
-  }
+
 
   a {
     font-family: $poppins;
@@ -15,10 +15,14 @@
     font-size: 14px;
     line-height: 21px;
     color: $text-dark;
-
+    margin:0 0 0 35px;
     &:hover {
       color:$second;
     }
+  }
+
+  a:first-child {
+    margin:0 0 0 50px;
   }
 
   &.wrapper-login-busket--tablet {
@@ -31,6 +35,7 @@
       display: flex;
       min-width:auto;
       width:auto;
+      cursor: pointer;
 
       svg {
         stroke:$text-dark;
@@ -42,8 +47,38 @@
       }
     }
 
+    &.wrapper-login-busket--tablet-open {
+      svg {
+        stroke:#fff;
+      }
+    }
     &.wrapper-login-busket--desktop {
       display: none;
+    }
+
+
+  }
+}
+
+.wrapper-login-busket__login {
+  &.wrapper-login-busket__login--menu {
+
+    @media (max-width: $tablet-width) {
+      margin:55px 0 0 0;
+      font-family: $poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23px;
+      color: #FFFFFF;
+
+      &:hover {
+        color:#000;
+      }
+    }
+
+    @media (max-width: $mobile-width-only) {
+      margin:45px 0 0 0;
     }
   }
 }

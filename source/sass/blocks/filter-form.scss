@@ -3,13 +3,79 @@
   margin:0 50px 0 0;
 
   @media (max-width: $tablet-width) {
-    display: none;
+    position: fixed;
+    min-width:423px;
+    max-height: calc(100vh - 50px);
+    top:11px;
+    left:0;
+    z-index: 20;
+    padding:16px 16px 40px 0;
+    overflow-y: auto;
+
+    &.filter-form--close {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    min-width: 270px;
+    top:60px;
+    left:calc(50% - 155px);
+    padding:16px 23px 40px 23px;
+    max-height: calc(100vh - 100px);
+  }
+}
+.filter-form__close {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top:0;
+    right:0;
+    width:32px;
+    height:32px;
+    border-radius: 50%;
+    background-color:#000;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 6px;
+      width:20px;
+      height: 2px;
+      background: #fff;
+      transform: rotate(45deg);
+      box-shadow: none;
+      }
+
+      &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 6px;
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      transform: rotate(-45deg);
+      }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    right:7px;
+    box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
   }
 }
 
 .filter-form__form {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $tablet-width) {
+    padding:0 0 40px 0;
+    box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
+  }
 }
 
 .filter-form__element {
@@ -24,6 +90,7 @@
 
   label {
     display: none;
+    word-wrap:break-word;
     max-width: max-content;
     position: relative;
     margin:18px 0 0 35px;
@@ -99,6 +166,47 @@
       display: flex;
     }
   }
+
+  @media (max-width: $tablet-width) {
+    border-right:none;
+    border-left:0;
+    padding:40px 21px 40px;
+
+    svg {
+      top:40px;
+      right:40px;
+      width:20px;
+      height:12px;
+    }
+
+    &.filter-form__element--products {
+      padding:40px 21px 40px;
+      border-top:none;
+    }
+
+    label {
+      margin:20px 0 0 31px;
+    }
+
+    label:first-of-type {
+      margin:30px 0 0 31px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding:30px 20px;
+
+    svg {
+      top:31px;
+      right:20px;
+    }
+
+    &.filter-form__element--products {
+      padding:30px 20px;
+      border-top:none;
+    }
+
+  }
 }
 
 .filter-form__submit {
@@ -113,6 +221,14 @@
   line-height: 21px;
   color: #FFFFFF;
   cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    margin:35px 40px 0 21px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin:35px 20px 0 20px;
+  }
 }
 
 .filter-form__reset {
@@ -127,6 +243,14 @@
   line-height: 21px;
   color: $text-dark;
   cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    margin:35px 40px 0 21px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin:20px 20px 0 20px;
+  }
 }
 
 .filter-form__price-line {
@@ -136,6 +260,14 @@
   height:1px;
   background-color: #F0EAE4;
   margin:32px 0 0 0;
+
+  @media (max-width:$tablet-width) {
+    width:304px;
+  }
+
+  @media (max-width:$mobile-width-only) {
+    width:210px;
+  }
 }
 
 .filter-form__price-second-line {
@@ -168,6 +300,15 @@
     background-color: $second;
     border-radius: 50%;
   }
+
+  @media (max-width: $tablet-width) {
+    width:158px;
+  }
+
+  @media (max-width:$mobile-width-only) {
+    width:120px;
+    left:40px;
+  }
 }
 
 .filter-form__price-numbers {
@@ -184,5 +325,13 @@
     line-height: 18px;
     color: $text-dark;
     margin:0;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding:0 140px 0 38px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding:0 45px 0 20px;
   }
 }

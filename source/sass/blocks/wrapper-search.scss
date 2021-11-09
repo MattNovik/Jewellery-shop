@@ -16,3 +16,51 @@
     display: none;
   }
 }
+
+.wrapper-search__tablet {
+  position:relative;
+
+  label {
+    position:absolute;
+    top:12px;
+    left:12px;
+
+    svg {
+      width:16px;
+      height:16px;
+      fill:#fff;
+    }
+  }
+}
+
+.wrapper-search__tablet-search {
+  width:678px;
+  height:40px;
+  border:none;
+  box-sizing: border-box;
+  border-radius: 21px;
+  background-color:rgba(255, 255, 255, 0.15);
+  padding:12px;
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: rgba(255, 255, 255, 0.75);
+
+  &:focus {
+    border:none;
+    outline:none;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width:290px;
+  }
+}
+
+.wrapper-search__tablet-search--no-label + label {
+  display:none;
+}
+.wrapper-search__tablet-search:focus + label {
+  display: none;
+}

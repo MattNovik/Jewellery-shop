@@ -1,28 +1,213 @@
 'use strict';
 const questionsListElements = document.querySelectorAll('.questions__list-element');
 const filterFormElements = document.querySelectorAll('.filter-form__element');
+const wrapperFilterForm = document.querySelector('.filter-form');
 const filterForm = document.querySelector('.filter-form__form');
+const popup = document.querySelector('.form-login');
+const loginForm = document.querySelector('.form-login__form');
+const openLoginForm = document.querySelectorAll('.wrapper-login-busket__login');
+const page = document.querySelector('.page');
+const pageHover = document.querySelector('.page-main__module-hover');
+const popupClose = document.querySelector('.form-login__close');
+const loginFormNameInput = document.querySelector('.form-login__email');
+const closeFilterForm = document.querySelector('.filter-form__close');
+const openFilterForm = document.querySelector('.filter-open-tablet');
+const inputSearchTabletMenu = document.querySelector('.wrapper-search__tablet-search');
+const openMenuTablet = document.querySelector('.menu--tablet');
+const menuTablet = document.querySelector('.menu--nav-tablet');
+const pageHeader = document.querySelector('.page-header');
+const menuBusketTablet = document.querySelector('.wrapper-login-busket--tablet');
+const logoDesktop = document.querySelectorAll('.logo--desktop');
+const logoTabletMenu = document.querySelectorAll('.logo--tablet');
+let checkingEventListener = 0;
+
+menuTablet.classList.remove('menu--nav-tablet-nojs');
+openMenuTablet.classList.remove('menu--tablet-open');
+pageHeader.classList.remove('page-header--open-menu');
+menuTablet.classList.remove('menu--nav-tablet-open');
+menuBusketTablet.classList.remove('wrapper-login-busket--tablet-open');
+for (let i = 0; i< logoDesktop.length;i++) {
+  logoDesktop[i].classList.remove('logo--desktop-close');
+  logoTabletMenu[i].classList.remove('logo--tablet-open');
+}
+
+for (let i = 0; i < questionsListElements.length;i++) {
+  questionsListElements[i].classList.remove('questions__list-element--open');
+  questionsListElements[i].addEventListener('click',(evt) => {
+    if (evt.target.tagName === 'H3' || evt.target.tagName === 'svg' || evt.target.tagName === 'use') {
+      questionsListElements[i].classList.toggle('questions__list-element--open');
+    }
+  });
+}
+
+menuTablet.addEventListener('click', (evt)=> {
+  if (evt.target.classList.contains('wrapper-login-busket__login')) {
+    openMenuTablet.classList.toggle('menu--tablet-open');
+    menuTablet.classList.toggle('menu--nav-tablet-open');
+    pageHeader.classList.toggle('page-header--open-menu');
+    menuBusketTablet.classList.toggle('wrapper-login-busket--tablet-open');
+    if (checkingEventListener === 0) {
+      document.addEventListener('keydown', onMenuEscKeydown);
+      checkingEventListener++;
+    } else {
+      document.removeEventListener('keydown', onMenuEscKeydown);
+      checkingEventListener--;
+    }
+    for (let i = 0; i< logoDesktop.length;i++) {
+      logoDesktop[i].classList.toggle('logo--desktop-close');
+      logoTabletMenu[i].classList.toggle('logo--tablet-open');
+    }
+  } else if (evt.target.tagName === 'A') {
+    openMenuTablet.classList.toggle('menu--tablet-open');
+    page.classList.toggle('page--hidden');
+    menuTablet.classList.toggle('menu--nav-tablet-open');
+    pageHeader.classList.toggle('page-header--open-menu');
+    menuBusketTablet.classList.toggle('wrapper-login-busket--tablet-open');
+    if (checkingEventListener === 0) {
+      document.addEventListener('keydown', onMenuEscKeydown);
+      checkingEventListener++;
+    } else {
+      document.removeEventListener('keydown', onMenuEscKeydown);
+      checkingEventListener--;
+    }
+    for (let i = 0; i< logoDesktop.length;i++) {
+      logoDesktop[i].classList.toggle('logo--desktop-close');
+      logoTabletMenu[i].classList.toggle('logo--tablet-open');
+    }
+  }
+});
+
+openMenuTablet.addEventListener('click', (evt)=> {
+  openMenuTablet.classList.toggle('menu--tablet-open');
+  page.classList.toggle('page--hidden');
+  menuTablet.classList.toggle('menu--nav-tablet-open');
+  pageHeader.classList.toggle('page-header--open-menu');
+  menuBusketTablet.classList.toggle('wrapper-login-busket--tablet-open');
+  if (checkingEventListener === 0) {
+    document.addEventListener('keydown', onMenuEscKeydown);
+    checkingEventListener++;
+  } else {
+    document.removeEventListener('keydown', onMenuEscKeydown);
+    checkingEventListener--;
+  }
+  for (let i = 0; i< logoDesktop.length;i++) {
+    logoDesktop[i].classList.toggle('logo--desktop-close');
+    logoTabletMenu[i].classList.toggle('logo--tablet-open');
+  }
+});
+
+const onMenuEscKeydown = (evt) => {
+  if (isEscEvent(evt)) {
+    checkingEventListener--;
+    evt.preventDefault();
+    openMenuTablet.classList.remove('menu--tablet-open');
+    page.classList.remove('page--hidden');
+    menuTablet.classList.remove('menu--nav-tablet-open');
+    pageHeader.classList.remove('page-header--open-menu');
+    menuBusketTablet.classList.remove('wrapper-login-busket--tablet-open');
+    for (let i = 0; i< logoDesktop.length;i++) {
+      logoDesktop[i].classList.remove('logo--desktop-close');
+      logoTabletMenu[i].classList.remove('logo--tablet-open');
+    }
+  }
+};
+
+inputSearchTabletMenu.addEventListener('change',(evt)=> {
+  if (inputSearchTabletMenu.value != 0) {
+    inputSearchTabletMenu.classList.add('wrapper-search__tablet-search--no-label');
+  } else {
+    inputSearchTabletMenu.classList.remove('wrapper-search__tablet-search--no-label');
+  }
+});
+
+if (openFilterForm) {
+  openFilterForm.addEventListener('click', (evt) => {
+    wrapperFilterForm.classList.remove('filter-form--close');
+    pageHover.classList.remove('page-main__module-hover--closed');
+    document.addEventListener('keydown', onFilterEscKeydown);
+    page.classList.add('page--hidden');
+  });
+}
+
+if (closeFilterForm) {
+  closeFilterForm.addEventListener('click', (evt)=> {
+    wrapperFilterForm.classList.add('filter-form--close');
+    pageHover.classList.add('page-main__module-hover--closed');
+    page.classList.remove('page--hidden');
+    document.removeEventListener('keydown', onFilterEscKeydown);
+  });
+}
+
+for (let i = 0; i < openLoginForm.length;i++) {
+  openLoginForm[i].addEventListener('click', (evt) => {
+    evt.preventDefault();
+    popup.classList.remove('form-login--close');
+    pageHover.classList.remove('page-main__module-hover--closed');
+    loginFormNameInput.focus();
+    document.addEventListener('keydown', onPopupEscKeydown);
+    page.classList.add('page--hidden');
+  });
+}
+
+const isEscEvent = (evt) => {
+  return evt.key === 'Escape' || evt.key === 'Esc';
+};
+
+const onPopupEscKeydown = (evt) => {
+  if (isEscEvent(evt)) {
+    evt.preventDefault();
+    popup.classList.add('form-login--close');
+    pageHover.classList.add('page-main__module-hover--closed');
+    page.classList.remove('page--hidden');
+  }
+};
+
+const onFilterEscKeydown = (evt) => {
+  if (isEscEvent(evt)) {
+    evt.preventDefault();
+    wrapperFilterForm.classList.add('filter-form--close');
+    pageHover.classList.add('page-main__module-hover--closed');
+    page.classList.remove('page--hidden');
+  }
+};
+
+pageHover.addEventListener('click', () => {
+  popup.classList.add('form-login--close');
+  if (wrapperFilterForm) {
+    wrapperFilterForm.classList.add('filter-form--close');
+  }
+  pageHover.classList.add('page-main__module-hover--closed');
+  page.classList.remove('page--hidden');
+  document.removeEventListener('keydown', onPopupEscKeydown);
+});
+
+popupClose.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  popup.classList.add('form-login--close');
+  pageHover.classList.add('page-main__module-hover--closed');
+  page.classList.remove('page--hidden');
+  document.removeEventListener('keydown', onPopupEscKeydown);
+});
 
 if (filterForm) {
   filterForm.addEventListener('submit', (evt) => {
     evt.preventDefault();
+    localStorage.setItem('email', loginFormNameInput.value);
     alert('checked');
   });
 }
 
+if (loginForm) {
+  loginForm.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    alert('send');
+  });
+}
 
 for (let i = 0; i < filterFormElements.length;i++) {
   filterFormElements[i].addEventListener('click',(evt) => {
     if (evt.target.tagName === 'H2' || evt.target.tagName === 'svg' || evt.target.tagName === 'use') {
       filterFormElements[i].classList.toggle('filter-form__element--open');
-    }
-  });
-}
-
-for (let i = 0; i < questionsListElements.length;i++) {
-  questionsListElements[i].addEventListener('click',(evt) => {
-    if (evt.target.tagName === 'H3' || evt.target.tagName === 'svg' || evt.target.tagName === 'use') {
-      questionsListElements[i].classList.toggle('questions__list-element--open');
     }
   });
 }
@@ -35,10 +220,14 @@ for (let i = 0; i < questionsListElements.length;i++) {
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-  new ChiefSlider('#slider');
+  if (document.querySelector('#slider')) {
+    new ChiefSlider('#slider');
+  }
 });
 document.addEventListener('DOMContentLoaded', function() {
-  new ChiefSlider('#slider-mob');
+  if (document.querySelector('#slider-mob')) {
+    new ChiefSlider('#slider-mob');
+  }
 });
  (function() {
   if (typeof window.CustomEvent === 'function' ) return false;
@@ -352,6 +541,7 @@ ChiefSlider.prototype._updateIndicators = function() {
     var $item = $itemList[index];
     if ($item.classList.contains(CLASS_ITEM_ACTIVE)) {
       $indicatorList[index].classList.add(CLASS_INDICATOR_ACTIVE);
+      document.querySelector('.active-page').innerHTML = index+1;
     } else {
       $indicatorList[index].classList.remove(CLASS_INDICATOR_ACTIVE);
     }

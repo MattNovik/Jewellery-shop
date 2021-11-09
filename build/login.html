@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#ffffff">
+  <title>Jewellery</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="preload" href="fonts/cormorant-garamond-bold.woff" as="font" type="font/woff" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-regular.woff" as="font" type="font/woff" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-semi-bold.woff" as="font" type="font/woff" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-semi-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-bold.woff" as="font" type="font/woff" crossorigin="">
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-medium.woff" as="font" type="font/woff" crossorigin="">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-regular.woff" as="font" type="font/woff" crossorigin="">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="page-header page-header--login">
+    <div class="page-header__top">
+      <picture>
+        <!-- 1x: 66x66; 2x: 132x132 -->
+        <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+        <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo" width="66" height="66">
+      </picture>
+    </div>
+  </header>
+  <main class="page-main">
+    <div class="page-main__module-hover"></div>
+    <section class="form-login">
+      <a href="index.html" class="form-login__close"></a>
+      <div class="form-login__image"></div>
+      <h3>Log In</h3>
+      <form method="post" enctype="multipart/form-data" autocomplete="off" class="form-login__form">
+        <input title="" type="email" class="form-login__email" name="email-login" value="" id="email-login" placeholder="Your E-mail" required="">
+        <label for="email-login"></label>
+        <input title="" type="password" class="form-login__password" name="password-login" value="" id="password-login" placeholder="Password" required="" minlength="6">
+        <label for="password-login"></label>
+        <a href="#">Forgot your password?</a>
+        <button class="form-login__submit" type="submit">Log In</button>
+        <p>Don’t have an account? <a href="#">Sign up</a></p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

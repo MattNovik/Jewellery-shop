@@ -223,13 +223,36 @@
   justify-content:space-between;
   list-style: none;
 
-  @media (max-width: $tablet-width) {
-    width:118px;
+  &.slider__indicators--mob {
+    display: none;
   }
 
   @media (max-width: $tablet-width) {
     width:118px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width:118px;
     margin:40px auto 0;
+
+    p,span {
+      margin:0;
+      font-family: $poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      color: $text-dark;
+    }
+
+    &.slider__indicators--tablet {
+      display: none;
+    }
+
+    &.slider__indicators--mob {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 

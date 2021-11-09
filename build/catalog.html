@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page">
-  <header class="page-header">
+  <header class="page-header page-header--open-menu">
     <div class="wrapper-page-header-top">
       <div class="page-header__top">
         <div class="wrapper-search wrapper-search--desktop">
@@ -34,21 +34,26 @@
             <svg height="14" width="14" viewBox="0 0 14 14"><use xlink:href="img/sprite_auto.svg#icon-search"></use></svg>
             </label>
         </div>
-        <nav class="menu menu--tablet">
+        <nav class="menu menu--tablet menu--tablet-open">
           <svg height="18" width="25" viewBox="0 0 25 18"><use xlink:href="img/sprite_auto.svg#icon-hamburger"></use></svg>
         </nav>
-        <picture>
+        <picture class="logo logo--desktop logo--desktop-close">
           <!-- 1x: 66x66; 2x: 132x132 -->
           <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
-          <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo" width="66" height="66">
+          <img class="logo logo--desktop logo--desktop-close" src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo" width="66" height="66">
         </picture>
-        <div class="wrapper-login-busket wrapper-login-busket--tablet">
-          <a href="#" class="wrapper-login-busket__login">
+        <picture class="logo logo--tablet logo--tablet-open">
+          <!-- 1x: 66x66; 2x: 132x132 -->
+          <source srcset="img/logo_tablet-menu.webp 1x, img/logo_tablet-menu@2x.webp 2x" type="image/webp">
+          <img class="logo logo--tablet logo--tablet-open" src="img/logo_tablet-menu.png" srcset="img/logo_tablet-menu.png 1x, img/logo_tablet-menu@2x.png 2x" alt="logo" width="66" height="66">
+        </picture>
+        <div class="wrapper-login-busket wrapper-login-busket--tablet wrapper-login-busket--tablet-open">
+          <a href="#" class="wrapper-login-busket__busket">
             <svg height="18" width="20" viewBox="0 0 20 18"><use xlink:href="img/sprite_auto.svg#icon-busket"></use></svg>
           </a>
         </div>
         <div class="wrapper-login-busket wrapper-login-busket--desktop">
-          <a href="#" class="wrapper-login-busket__login">Login</a>
+          <a href="login.html" class="wrapper-login-busket__login">Login</a>
           <a href="#" class="wrapper-login-busket__busket">Cart <span>0</span></a>
         </div>
       </div>
@@ -62,8 +67,44 @@
         <li><a href="#">Earrings</a></li>
       </ul>
     </nav>
+    <div class="menu menu--nav-tablet menu--nav-tablet-open menu--nav-tablet-nojs">
+      <div class="wrapper-search__tablet">
+        <input type="text" id="search-menu" class="wrapper-search__tablet-search" placeholder="">
+        <label for="search-menu">
+          <svg height="14" width="14" viewBox="0 0 14 14"><use xlink:href="img/sprite_auto.svg#icon-search"></use></svg>
+          </label>
+      </div>
+      <ul class="menu__list-tablet">
+        <li><a href="#">What’s new</a></li>
+        <li><a href="#">Chokers</a></li>
+        <li><a href="#">Necklaces</a></li>
+        <li><a href="#">Rings</a></li>
+        <li><a href="#">Earrings</a></li>
+      </ul>
+      <ul class="menu__list-tablet-about">
+        <li><a href="#">About CH</a></li>
+        <li><a href="#">Stores & Hours</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <a href="login.html" class="wrapper-login-busket__login wrapper-login-busket__login--menu">Login</a>
+    </div>
   </header>
   <main class="page-main">
+    <div class="page-main__module-hover page-main__module-hover--closed"></div>
+    <section class="form-login form-login--close">
+      <a href="index.html" class="form-login__close"></a>
+      <div class="form-login__image"></div>
+      <h3>Log In</h3>
+      <form method="post" enctype="multipart/form-data" autocomplete="off" class="form-login__form">
+        <input title="" type="email" class="form-login__email" name="email-login" value="" id="email-login" placeholder="Your E-mail" required="">
+        <label for="email-login"></label>
+        <input title="" type="password" class="form-login__password" name="password-login" value="" id="password-login" placeholder="Password" required="" minlength="6">
+        <label for="password-login"></label>
+        <a href="#">Forgot your password?</a>
+        <button class="form-login__submit" type="submit">Log In</button>
+        <p>Don’t have an account? <a href="#">Sign up</a></p>
+      </form>
+    </section>
     <section class="main-image-catalog">
       <h1>ALL JEWELLERY</h1>
       <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
@@ -71,18 +112,19 @@
     <div class="wrapper-filter-products">
       <div class="filter-products">
         <button class="filter-open-tablet">Filter</button>
-        <section class="filter-form">
+        <section class="filter-form filter-form--close">
+          <span class="filter-form__close"></span>
           <form action="" class="filter-form__form">
             <div class="filter-form__element filter-form__element--products filter-form__element--open">
               <h2>Product</h2>
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
-              <input class="visibility-hidden" type="checkbox" id="necklaces">
+              <input class="visibility-hidden" type="checkbox" id="necklaces" checked="">
               <label for="necklaces">Necklaces</label>
-              <input class="visibility-hidden" type="checkbox" id="chokers">
+              <input class="visibility-hidden" type="checkbox" id="chokers" checked="">
               <label for="chokers">Chokers</label>
               <input class="visibility-hidden" type="checkbox" id="rings">
               <label for="rings">Rings</label>
-              <input class="visibility-hidden" type="checkbox" id="earrings">
+              <input class="visibility-hidden" type="checkbox" id="earrings" checked="">
               <label for="earrings">Earrings</label>
             </div>
             <div class="filter-form__element filter-form__element--material">

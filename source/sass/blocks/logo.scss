@@ -1,0 +1,16 @@
+.logo {
+
+  &.logo--tablet {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+
+    &.logo--desktop-close {
+      display: none;
+    }
+    &.logo--tablet-open {
+      display: block;
+    }
+  }
+}
