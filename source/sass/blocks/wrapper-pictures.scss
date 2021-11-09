@@ -5,7 +5,7 @@
   grid-template-areas:
   'first second third fourth'
   'fifth second six sevens';
-  row-gap: 34px;
+  row-gap: 32px;
   column-gap: 27px;
   margin:70px 0 0 0;
 
@@ -20,6 +20,7 @@
     grid-template-rows: 133px 87px;
     row-gap: 20px;
     column-gap: 16px;
+    margin:67px 0 0 0;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -27,10 +28,11 @@
     grid-template-rows: 133px 87px 87px;
     grid-template-areas:
     'first second'
-    'third second'
+    'fifth second'
     'six sevens';
     row-gap: 27px;
     column-gap: 24px;
+    margin:53px 0 0 0;
   }
 }
 
@@ -69,7 +71,7 @@
     &.wrapper-pictures__pic--fourth {
       display: none;
     }
-    &.wrapper-pictures__pic--fifth {
+    &.wrapper-pictures__pic--third {
       display: none;
     }
   }

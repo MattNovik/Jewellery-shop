@@ -4,7 +4,7 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  margin:17px 0 0 0;
+  margin:12px 0 0 0;
 
 
 
@@ -36,6 +36,7 @@
       min-width:auto;
       width:auto;
       cursor: pointer;
+      margin:25px 0 0 0;
 
       svg {
         stroke:$text-dark;
@@ -57,5 +58,12 @@
     }
 
 
+  }
+
+  @media (max-width: $mobile-width-only) {
+
+    &.wrapper-login-busket--tablet {
+      margin:16px 0 0 0;
+    }
   }
 }

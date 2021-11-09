@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   margin:0 auto;
-  padding:18px 0 19px 0;
+  padding:14px 0 19px 0;
   box-sizing: border-box;
 
   a {
@@ -85,6 +85,12 @@
   }
 
   @media (max-width: $mobile-width-only) {
+
+    &.menu--tablet {
+      svg {
+        margin:-8px 0 0 0;
+      }
+    }
     &.menu--nav-tablet {
       top:100px;
       padding:30px 15px 50px;
@@ -100,12 +106,21 @@
   padding:0;
 
   li {
-    margin:0 34px 0 0;
+    margin:0 32px 0 0;
     font-family: $poppins;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-dark;
+  }
+
+  a {
+    font-family: $poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
     color: $text-dark;
   }
 

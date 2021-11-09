@@ -32,7 +32,7 @@
   }
 
   p {
-    margin:20px 0 0 0;
+    margin:-8px 0 0 0;
     font-family: $cormorant;
     font-style: italic;
     font-weight: normal;
@@ -43,6 +43,14 @@
   }
 
   @media (max-width: $tablet-width) {
+
+    h1 {
+      margin:0 0 0 -15px;
+    }
+
+    p {
+      margin:-5px 0 0 -15px;
+    }
     min-height: 463px;
     background-image: url('../img/main-index-tablet.jpg');
     background-image: image-set(
@@ -62,11 +70,13 @@
     h1 {
       font-size: 38px;
       line-height: 49px;
+      margin:0 0 0 0;
     }
 
     p {
       font-size: 34px;
       line-height: 44px;
+      margin:-5px 0 0 0;
     }
 
     background-image: url('../img/main-index-mob.jpg');

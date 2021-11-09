@@ -16,7 +16,7 @@
   }
 
   @media (max-width: $tablet-width) {
-
+    margin:55px 0 0 0;
     display: none;
 
     &.slider:last-child {
@@ -25,7 +25,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    margin:50px 0 0 0;
+    margin:45px 0 0 0;
   }
 }
 
@@ -104,11 +104,11 @@
   }
 
   p:first-of-type {
-    margin:25px 0 0 0;
+    margin:15px 0 0 0;
   }
 
   p:last-of-type {
-    margin:15px 0 0 0;
+    margin:5px 0 0 0;
     font-weight:700;
     font-size: 14px;
   }
@@ -138,7 +138,7 @@
     }
 
     p:first-of-type {
-      margin:20px 0 0 0;
+      margin:11px 0 0 0;
     }
   }
 }
@@ -147,14 +147,15 @@
 
 .slider__control {
   position: absolute;
-  top: -95px;
+  top: -105px;
   width:29px;
   height:11px;
   cursor: pointer;
 
   @media (max-width: $tablet-width) {
-    width:36px;
     height:15px;
+    top: -98px;
+    width:36px;
   }
 
   @media (max-width:$mobile-width-only) {
@@ -174,7 +175,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    left:calc(100vw/2 - 335px);
+    left:calc(100vw/2 - 340px);
   }
 }
 
@@ -186,7 +187,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    left:calc(100vw/2 + 310px);
+    left:calc(100vw/2 + 305px);
   }
 }
 
@@ -206,11 +207,22 @@
 .slider__control[data-slide='prev']::before {
   background-image: url('../img/icon-arrow-right.svg');
 
+  @media (max-width: $tablet-width) {
+    width:36px;
+    height:15px;
+    background-size: cover;
+  }
 }
 
 .slider__control[data-slide='next']::before {
   background-image: url('../img/icon-arrow-right.svg');
   transform: rotate(180deg);
+
+  @media (max-width: $tablet-width) {
+    width:36px;
+    height:15px;
+    background-size: cover;
+  }
 }
 
 /* индикаторы */
@@ -218,7 +230,7 @@
 .slider__indicators {
   width:48px;
   line-height:12px;
-  margin:60px auto 0;
+  margin:50px auto 0;
   padding:0;
   display: flex;
   justify-content:space-between;
@@ -230,11 +242,12 @@
 
   @media (max-width: $tablet-width) {
     width:118px;
+    margin:42px auto 0;
   }
 
   @media (max-width: $mobile-width-only) {
     width:118px;
-    margin:40px auto 0;
+    margin:10px auto 0;
 
     p,span {
       margin:0;
@@ -244,6 +257,10 @@
       font-size: 16px;
       line-height: 21px;
       color: $text-dark;
+    }
+
+    span:last-of-type {
+      margin:0 9px;
     }
 
     &.slider__indicators--tablet {
