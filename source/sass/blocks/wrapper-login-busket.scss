@@ -59,26 +59,3 @@
 
   }
 }
-
-.wrapper-login-busket__login {
-  &.wrapper-login-busket__login--menu {
-
-    @media (max-width: $tablet-width) {
-      margin:55px 0 0 0;
-      font-family: $poppins;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 23px;
-      color: #FFFFFF;
-
-      &:hover {
-        color:#000;
-      }
-    }
-
-    @media (max-width: $mobile-width-only) {
-      margin:45px 0 0 0;
-    }
-  }
-}

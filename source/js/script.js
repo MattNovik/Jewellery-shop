@@ -1,4 +1,5 @@
 'use strict';
+(function() {
 const questionsListElements = document.querySelectorAll('.questions__list-element');
 const filterFormElements = document.querySelectorAll('.filter-form__element');
 const wrapperFilterForm = document.querySelector('.filter-form');
@@ -12,7 +13,7 @@ const popupClose = document.querySelector('.form-login__close');
 const loginFormNameInput = document.querySelector('.form-login__email');
 const closeFilterForm = document.querySelector('.filter-form__close');
 const openFilterForm = document.querySelector('.filter-open-tablet');
-const inputSearchTabletMenu = document.querySelector('.wrapper-search__tablet-search');
+const inputSearchTabletMenu = document.querySelector('.wrapper-search-tablet__search');
 const openMenuTablet = document.querySelector('.menu--tablet');
 const menuTablet = document.querySelector('.menu--nav-tablet');
 const pageHeader = document.querySelector('.page-header');
@@ -20,6 +21,17 @@ const menuBusketTablet = document.querySelector('.wrapper-login-busket--tablet')
 const logoDesktop = document.querySelectorAll('.logo--desktop');
 const logoTabletMenu = document.querySelectorAll('.logo--tablet');
 let checkingEventListener = 0;
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (document.querySelector('#slider')) {
+    new ChiefSlider('#slider');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  if (document.querySelector('#slider-mob')) {
+    new ChiefSlider('#slider-mob');
+  }
+});
 
 menuTablet.classList.remove('menu--nav-tablet-nojs');
 openMenuTablet.classList.remove('menu--tablet-open');
@@ -34,14 +46,13 @@ for (let i = 0; i< logoDesktop.length;i++) {
 for (let i = 0; i < questionsListElements.length;i++) {
   questionsListElements[i].classList.remove('questions__list-element--open');
   questionsListElements[i].addEventListener('click',(evt) => {
-    if (evt.target.tagName === 'H3' || evt.target.tagName === 'svg' || evt.target.tagName === 'use') {
       questionsListElements[i].classList.toggle('questions__list-element--open');
-    }
   });
 }
 
 menuTablet.addEventListener('click', (evt)=> {
-  if (evt.target.classList.contains('wrapper-login-busket__login')) {
+  if (evt.target.classList.contains('menu__login--menu')) {
+    evt.preventDefault();
     openMenuTablet.classList.toggle('menu--tablet-open');
     menuTablet.classList.toggle('menu--nav-tablet-open');
     pageHeader.classList.toggle('page-header--open-menu');
@@ -57,6 +68,10 @@ menuTablet.addEventListener('click', (evt)=> {
       logoDesktop[i].classList.toggle('logo--desktop-close');
       logoTabletMenu[i].classList.toggle('logo--tablet-open');
     }
+    popup.classList.remove('form-login--close');
+    pageHover.classList.remove('page-main__module-hover--closed');
+    loginFormNameInput.focus();
+    document.addEventListener('keydown', onPopupEscKeydown);
   } else if (evt.target.tagName === 'A') {
     openMenuTablet.classList.toggle('menu--tablet-open');
     page.classList.toggle('page--hidden');
@@ -114,9 +129,9 @@ const onMenuEscKeydown = (evt) => {
 
 inputSearchTabletMenu.addEventListener('change',(evt)=> {
   if (inputSearchTabletMenu.value != 0) {
-    inputSearchTabletMenu.classList.add('wrapper-search__tablet-search--no-label');
+    inputSearchTabletMenu.classList.add('wrapper-search-tablet__search--no-label');
   } else {
-    inputSearchTabletMenu.classList.remove('wrapper-search__tablet-search--no-label');
+    inputSearchTabletMenu.classList.remove('wrapper-search-tablet__search--no-label');
   }
 });
 
@@ -212,52 +227,10 @@ for (let i = 0; i < filterFormElements.length;i++) {
   });
 }
 
-
-/**
- * ChiefSlider by Itchief v2.0.0 (https://github.com/itchief/ui-components/tree/master/simple-adaptive-slider)
- * Copyright 2020 - 2021 Alexander Maltsev
- * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
- */
-
-document.addEventListener('DOMContentLoaded', function() {
-  if (document.querySelector('#slider')) {
-    new ChiefSlider('#slider');
-  }
-});
-document.addEventListener('DOMContentLoaded', function() {
-  if (document.querySelector('#slider-mob')) {
-    new ChiefSlider('#slider-mob');
-  }
-});
- (function() {
-  if (typeof window.CustomEvent === 'function' ) return false;
-  function CustomEvent(event, params) {
-    params = params || {bubbles: false, cancelable: false, detail: null};
-    var e = document.createEvent('CustomEvent');
-    e.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
-    return e;
-  }
-  window.CustomEvent = CustomEvent;
-})();
-
 var WRAPPER_SELECTOR = '.slider__wrapper';
 var ITEMS_SELECTOR = '.slider__items';
 var ITEM_SELECTOR = '.slider__item';
 var CONTROL_CLASS = 'slider__control';
-
-/* var ITEM_CLASS_ACTIVE = 'slider__item--active';
-var CONTROL_SELECTOR = '.slider__control';
-var CONTROL_CLASS_SHOW = 'slider__control_show';
-// индикаторы
-var INDICATOR_WRAPPER_ELEMENT = 'ol';
-var INDICATOR_WRAPPER_CLASS = 'slider__indicators';
-var INDICATOR_ITEM_ELEMENT = 'li';
-var INDICATOR_ITEM_CLASS = 'slider__indicator';
-var INDICATOR_ITEM_CLASS_ACTIVE = 'slider__indicator--active';
-// порог для переключения слайда (40%)
-var POS_THRESHOLD = 40;
-// класс для отключения transition
-var TRANSITION_NONE = 'transition-none';*/
 
 var SELECTOR_PREV = '.slider__control[data-slide="prev"]';
 var SELECTOR_NEXT = '.slider__control[data-slide="next"]';
@@ -349,7 +322,6 @@ function ChiefSlider(selector, config) {
   this._autoplay();
 }
 
-// подключения обработчиков событий для слайдера
 ChiefSlider.prototype._addEventListener = function() {
   var $root = this._$root;
   var $items = this._$items;
@@ -449,7 +421,6 @@ ChiefSlider.prototype._addEventListener = function() {
   document.addEventListener('visibilitychange', onVisibilityChange.bind(this));
 };
 
-// update values of extreme properties
 ChiefSlider.prototype.__refreshExtremeValues = function() {
   var $itemList = this._$itemList;
   this._minOrder = +$itemList[0].dataset.order;
@@ -473,7 +444,6 @@ ChiefSlider.prototype.__refreshExtremeValues = function() {
   }
 };
 
-// update position of item
 ChiefSlider.prototype._balancingItems = function() {
   if (!this._balancingItemsFlag) {
     return;
@@ -515,7 +485,6 @@ ChiefSlider.prototype._balancingItems = function() {
   requestAnimationFrame(this._balancingItems.bind(this));
 };
 
-// _setActiveClass
 ChiefSlider.prototype._setActiveClass = function() {
   var activeItems = this._activeItems;
   var $itemList = this._$itemList;
@@ -530,7 +499,6 @@ ChiefSlider.prototype._setActiveClass = function() {
   }
 };
 
-// _updateIndicators
 ChiefSlider.prototype._updateIndicators = function() {
   var $indicatorList = this._$indicatorList;
   var $itemList = this._$itemList;
@@ -548,7 +516,6 @@ ChiefSlider.prototype._updateIndicators = function() {
   }
 };
 
-// move slides
 ChiefSlider.prototype._move = function() {
   var step = this._direction ===
    'next' ? -this._transformStep : this._transformStep;
@@ -600,19 +567,16 @@ ChiefSlider.prototype._move = function() {
   this._$items.dispatchEvent(new CustomEvent('transition-start', {bubbles: true}));
 };
 
-// _moveToNext
 ChiefSlider.prototype._moveToNext = function() {
   this._direction = 'next';
   this._move();
 };
 
-// _moveToPrev
 ChiefSlider.prototype._moveToPrev = function() {
   this._direction = 'prev';
   this._move();
 };
 
-// _moveTo
 ChiefSlider.prototype._moveTo = function(index) {
   var $indicatorList = this._$indicatorList;
   var nearestIndex = null;
@@ -644,7 +608,6 @@ ChiefSlider.prototype._moveTo = function(index) {
   }
 };
 
-// _autoplay
 ChiefSlider.prototype._autoplay = function(action) {
   if (!this._config.autoplay) {
     return;
@@ -665,7 +628,6 @@ ChiefSlider.prototype._autoplay = function(action) {
   }
 };
 
-// _refresh
 ChiefSlider.prototype._refresh = function() {
   // create some constants
   var $itemList = this._$itemList;
@@ -732,7 +694,6 @@ ChiefSlider.prototype._refresh = function() {
   this._autoplay();
 };
 
-// public
 ChiefSlider.prototype.next = function() {
   this._moveToNext();
 };
@@ -745,3 +706,16 @@ ChiefSlider.prototype.moveTo = function(index) {
 ChiefSlider.prototype.refresh = function() {
   this._refresh();
 };
+
+})();
+
+ (function() {
+  if (typeof window.CustomEvent === 'function' ) return false;
+  function CustomEvent(event, params) {
+    params = params || {bubbles: false, cancelable: false, detail: null};
+    var e = document.createEvent('CustomEvent');
+    e.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+    return e;
+  }
+  window.CustomEvent = CustomEvent;
+})();

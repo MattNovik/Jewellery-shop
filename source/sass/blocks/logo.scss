@@ -9,8 +9,10 @@
     &.logo--desktop-close {
       display: none;
     }
-    &.logo--tablet-open {
-      display: block;
+    &.logo--tablet {
+      &.logo--tablet-open {
+        display: block;
+      }
     }
   }
 }

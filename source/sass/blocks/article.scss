@@ -1,33 +1,74 @@
 .article {
   display: flex;
   justify-content: flex-end;
+  background-color: $second;
 
   &.article--first {
     grid-area: first;
-    background-image: url('../../img/blog/desktop/first-desktop.jpg');
+    background-image: url('../img/blog/desktop/first-desktop.jpg');
+    background-image: image-set(
+      url('../img/blog/desktop/first-desktop.webp') type('image/webp'),
+      url('../img/blog/desktop/first-desktop.jpg') type('image/jpeg'));
     background-repeat: no-repeat;
     background-size:50% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/blog/desktop/first-desktop@2x.jpg');
+      background-image: image-set(
+        url('../img/blog/desktop/first-desktop@2x.webp') type('image/webp'),
+        url('../img/blog/desktop/first-desktop@2x.jpg') type('image/jpeg'));
+    }
   }
   &.article--second {
     grid-area: second;
     justify-content: flex-start;
-    background-image: url('../../img/blog/desktop/second-desktop.jpg');
+    background-image: url('../img/blog/desktop/second-desktop.jpg');
+    background-image: image-set(
+      url('../img/blog/desktop/second-desktop.webp') type('image/webp'),
+      url('../img/blog/desktop/second-desktop.jpg') type('image/jpeg'));
     background-repeat: no-repeat;
     background-position:right;
     background-size:50% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/blog/desktop/second-desktop@2x.jpg');
+      background-image: image-set(
+        url('../img/blog/desktop/second-desktop@2x.webp') type('image/webp'),
+        url('../img/blog/desktop/second-desktop@2x.jpg') type('image/jpeg'));
+    }
   }
   &.article--third {
     grid-area: third;
     align-items: flex-end;
-    background-image: url('../../img/blog/desktop/third-desktop.jpg');
+    background-image: url('../img/blog/desktop/third-desktop.jpg');
+    background-image: image-set(
+      url('../img/blog/desktop/third-desktop.webp') type('image/webp'),
+      url('../img/blog/desktop/third-desktop.jpg') type('image/jpeg'));
     background-repeat: no-repeat;
     background-size:100% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/blog/desktop/third-desktop@2x.jpg');
+      background-image: image-set(
+        url('../img/blog/desktop/third-desktop@2x.webp') type('image/webp'),
+        url('../img/blog/desktop/third-desktop@2x.jpg') type('image/jpeg'));
+    }
   }
 
   @media (max-width: $tablet-width) {
     &.article--third {
       background-size:50% 100%;
-      background-image: url('../../img/blog/tablet/third-tablet.jpg');
+      background-image: url('../img/blog/tablet/third-tablet.jpg');
+      background-image: image-set(
+      url('../img/blog/tablet/third-tablet.webp') type('image/webp'),
+      url('../img/blog/tablet/third-tablet.jpg') type('image/jpeg'));
+
+      @media (min-resolution: 2dppx) {
+        background-image: url('../img/blog/tablet/third-tablet@2x.jpg');
+        background-image: image-set(
+          url('.../img/blog/tablet/third-tablet@2x.webp') type('image/webp'),
+          url('../img/blog/tablet/third-tablet@2x.jpg') type('image/jpeg'));
+      }
     }
   }
 
