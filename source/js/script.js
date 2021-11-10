@@ -1,35 +1,32 @@
 'use strict';
 (function() {
-const questionsListElements = document.querySelectorAll('.questions__list-element');
-const filterFormElements = document.querySelectorAll('.filter-form__element');
-const wrapperFilterForm = document.querySelector('.filter-form');
-const filterForm = document.querySelector('.filter-form__form');
-const popup = document.querySelector('.form-login');
-const loginForm = document.querySelector('.form-login__form');
-const openLoginForm = document.querySelectorAll('.wrapper-login-busket__login');
-const page = document.querySelector('.page');
-const pageHover = document.querySelector('.page-main__module-hover');
-const popupClose = document.querySelector('.form-login__close');
-const loginFormNameInput = document.querySelector('.form-login__email');
-const closeFilterForm = document.querySelector('.filter-form__close');
-const openFilterForm = document.querySelector('.filter-open-tablet');
-const inputSearchTabletMenu = document.querySelector('.wrapper-search-tablet__search');
-const openMenuTablet = document.querySelector('.menu--tablet');
-const menuTablet = document.querySelector('.menu--nav-tablet');
-const pageHeader = document.querySelector('.page-header');
-const menuBusketTablet = document.querySelector('.wrapper-login-busket--tablet');
-const logoDesktop = document.querySelectorAll('.logo--desktop');
-const logoTabletMenu = document.querySelectorAll('.logo--tablet');
-let checkingEventListener = 0;
+var questionsListElements = document.querySelectorAll('.questions__list-element');
+var filterFormElements = document.querySelectorAll('.filter-form__element');
+var wrapperFilterForm = document.querySelector('.filter-form');
+var filterForm = document.querySelector('.filter-form__form');
+var popup = document.querySelector('.form-login');
+var loginForm = document.querySelector('.form-login__form');
+var openLoginForm = document.querySelectorAll('.wrapper-login-busket__login');
+var page = document.querySelector('.page');
+var pageHover = document.querySelector('.page-main__module-hover');
+var popupClose = document.querySelector('.form-login__close');
+var loginFormNameInput = document.querySelector('.form-login__email');
+var closeFilterForm = document.querySelector('.filter-form__close');
+var openFilterForm = document.querySelector('.filter-open-tablet');
+var inputSearchTabletMenu = document.querySelector('.wrapper-search-tablet__search');
+var openMenuTablet = document.querySelector('.menu--tablet');
+var menuTablet = document.querySelector('.menu--nav-tablet');
+var pageHeader = document.querySelector('.page-header');
+var menuBusketTablet = document.querySelector('.wrapper-login-busket--tablet');
+var logo = document.querySelector('.logo');
+var checkingEventListener = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
   if (document.querySelector('#slider')) {
-    new ChiefSlider('#slider');
+    new createChiefSlider('#slider');
   }
-});
-document.addEventListener('DOMContentLoaded', function() {
   if (document.querySelector('#slider-mob')) {
-    new ChiefSlider('#slider-mob');
+    new createChiefSlider('#slider-mob');
   }
 });
 
@@ -38,12 +35,9 @@ openMenuTablet.classList.remove('menu--tablet-open');
 pageHeader.classList.remove('page-header--open-menu');
 menuTablet.classList.remove('menu--nav-tablet-open');
 menuBusketTablet.classList.remove('wrapper-login-busket--tablet-open');
-for (let i = 0; i< logoDesktop.length;i++) {
-  logoDesktop[i].classList.remove('logo--desktop-close');
-  logoTabletMenu[i].classList.remove('logo--tablet-open');
-}
+logo.classList.remove('logo--open')
 
-for (let i = 0; i < questionsListElements.length;i++) {
+for (var i = 0; i < questionsListElements.length;i++) {
   questionsListElements[i].classList.remove('questions__list-element--open');
   questionsListElements[i].addEventListener('click',(evt) => {
       questionsListElements[i].classList.toggle('questions__list-element--open');
@@ -64,10 +58,7 @@ menuTablet.addEventListener('click', (evt)=> {
       document.removeEventListener('keydown', onMenuEscKeydown);
       checkingEventListener--;
     }
-    for (let i = 0; i< logoDesktop.length;i++) {
-      logoDesktop[i].classList.toggle('logo--desktop-close');
-      logoTabletMenu[i].classList.toggle('logo--tablet-open');
-    }
+    logo.classList.toggle('logo--open');
     popup.classList.remove('form-login--close');
     pageHover.classList.remove('page-main__module-hover--closed');
     loginFormNameInput.focus();
@@ -85,10 +76,7 @@ menuTablet.addEventListener('click', (evt)=> {
       document.removeEventListener('keydown', onMenuEscKeydown);
       checkingEventListener--;
     }
-    for (let i = 0; i< logoDesktop.length;i++) {
-      logoDesktop[i].classList.toggle('logo--desktop-close');
-      logoTabletMenu[i].classList.toggle('logo--tablet-open');
-    }
+    logo.classList.toggle('logo--open');
   }
 });
 
@@ -105,13 +93,10 @@ openMenuTablet.addEventListener('click', (evt)=> {
     document.removeEventListener('keydown', onMenuEscKeydown);
     checkingEventListener--;
   }
-  for (let i = 0; i< logoDesktop.length;i++) {
-    logoDesktop[i].classList.toggle('logo--desktop-close');
-    logoTabletMenu[i].classList.toggle('logo--tablet-open');
-  }
+  logo.classList.toggle('logo--open');
 });
 
-const onMenuEscKeydown = (evt) => {
+var onMenuEscKeydown = (evt) => {
   if (isEscEvent(evt)) {
     checkingEventListener--;
     evt.preventDefault();
@@ -120,10 +105,7 @@ const onMenuEscKeydown = (evt) => {
     menuTablet.classList.remove('menu--nav-tablet-open');
     pageHeader.classList.remove('page-header--open-menu');
     menuBusketTablet.classList.remove('wrapper-login-busket--tablet-open');
-    for (let i = 0; i< logoDesktop.length;i++) {
-      logoDesktop[i].classList.remove('logo--desktop-close');
-      logoTabletMenu[i].classList.remove('logo--tablet-open');
-    }
+    logo.classList.remove('logo--open');
   }
 };
 
@@ -153,7 +135,7 @@ if (closeFilterForm) {
   });
 }
 
-for (let i = 0; i < openLoginForm.length;i++) {
+for (var i = 0; i < openLoginForm.length;i++) {
   openLoginForm[i].addEventListener('click', (evt) => {
     evt.preventDefault();
     popup.classList.remove('form-login--close');
@@ -164,11 +146,11 @@ for (let i = 0; i < openLoginForm.length;i++) {
   });
 }
 
-const isEscEvent = (evt) => {
+var isEscEvent = (evt) => {
   return evt.key === 'Escape' || evt.key === 'Esc';
 };
 
-const onPopupEscKeydown = (evt) => {
+var onPopupEscKeydown = (evt) => {
   if (isEscEvent(evt)) {
     evt.preventDefault();
     popup.classList.add('form-login--close');
@@ -177,7 +159,7 @@ const onPopupEscKeydown = (evt) => {
   }
 };
 
-const onFilterEscKeydown = (evt) => {
+var onFilterEscKeydown = (evt) => {
   if (isEscEvent(evt)) {
     evt.preventDefault();
     wrapperFilterForm.classList.add('filter-form--close');
@@ -219,7 +201,7 @@ if (loginForm) {
   });
 }
 
-for (let i = 0; i < filterFormElements.length;i++) {
+for (var i = 0; i < filterFormElements.length;i++) {
   filterFormElements[i].addEventListener('click',(evt) => {
     if (evt.target.tagName === 'H2' || evt.target.tagName === 'svg' || evt.target.tagName === 'use') {
       filterFormElements[i].classList.toggle('filter-form__element--open');
@@ -234,14 +216,13 @@ var CONTROL_CLASS = 'slider__control';
 
 var SELECTOR_PREV = '.slider__control[data-slide="prev"]';
 var SELECTOR_NEXT = '.slider__control[data-slide="next"]';
-var SELECTOR_INDICATOR = '.slider__indicators>li';
+var SELECTOR_INDICATOR = '.slider__indicators-element';
 var SLIDER_TRANSITION_OFF = 'slider_disable-transition';
 var CLASS_CONTROL_HIDE = 'slider__control_hide';
 var CLASS_ITEM_ACTIVE = 'slider__item--active';
 var CLASS_INDICATOR_ACTIVE = 'active';
 
-function ChiefSlider(selector, config) {
-  // элементы слайдера
+function createChiefSlider(selector, config) {
   var $root = typeof selector === 'string' ?
     document.querySelector(selector) : selector;
   this._$root = $root;
@@ -251,27 +232,20 @@ function ChiefSlider(selector, config) {
   this._$controlPrev = $root.querySelector(SELECTOR_PREV);
   this._$controlNext = $root.querySelector(SELECTOR_NEXT);
   this._$indicatorList = $root.querySelectorAll(SELECTOR_INDICATOR);
-  // экстремальные значения слайдов
   this._minOrder = 0;
   this._maxOrder = 0;
   this._$itemWithMinOrder = null;
   this._$itemWithMaxOrder = null;
   this._minTranslate = 0;
   this._maxTranslate = 0;
-  // направление смены слайдов (по умолчанию)
   this._direction = 'next';
-  // determines whether the position of item needs to be determined
   this._balancingItemsFlag = false;
   this._activeItems = [];
-  // текущее значение трансформации
   this._transform = 0;
-  // swipe параметры
   this._hasSwipeState = false;
   this.__swipeStartPos = 0;
-  // slider properties
-  this._transform = 0; // текущее значение трансформации
+  this._transform = 0;
   this._intervalId = null;
-  // configuration of the slider
   this._config = {
     loop: true,
     autoplay: false,
@@ -284,17 +258,14 @@ function ChiefSlider(selector, config) {
       this._config[key] = config[key];
     }
   }
-  // create some constants
   var $itemList = this._$itemList;
   var widthItem = $itemList[0].offsetWidth;
   var widthWrapper = this._$wrapper.offsetWidth;
   var itemsInVisibleArea = Math.round(widthWrapper / widthItem);
-  // initial setting properties
   this._widthItem = widthItem;
   this._widthWrapper = widthWrapper;
   this._itemsInVisibleArea = itemsInVisibleArea;
   this._transformStep = 100 / itemsInVisibleArea;
-  // initial setting order and translate items
   for (var i = 0, length = $itemList.length; i < length; i++) {
     $itemList[i].dataset.index = i;
     $itemList[i].dataset.order = i;
@@ -304,7 +275,6 @@ function ChiefSlider(selector, config) {
     }
   }
   if (this._config.loop) {
-    // перемещаем последний слайд перед первым
     var count = $itemList.length - 1;
     var translate = -$itemList.length * 100;
     $itemList[count].dataset.order = -1;
@@ -322,7 +292,7 @@ function ChiefSlider(selector, config) {
   this._autoplay();
 }
 
-ChiefSlider.prototype._addEventListener = function() {
+createChiefSlider.prototype._addEventListener = function() {
   var $root = this._$root;
   var $items = this._$items;
   var config = this._config;
@@ -400,16 +370,13 @@ ChiefSlider.prototype._addEventListener = function() {
   $root.addEventListener('click', onClick.bind(this));
   $root.addEventListener('mouseenter', onMouseEnter.bind(this));
   $root.addEventListener('mouseleave', onMouseLeave.bind(this));
-  // on resize
   if (config.refresh) {
     window.addEventListener('resize', onResize.bind(this));
   }
-  // on transitionstart and transitionend
   if (config.loop) {
     $items.addEventListener('transition-start', onTransitionStart.bind(this));
     $items.addEventListener('transitionend', onTransitionEnd.bind(this));
   }
-  // on touchstart and touchend
   if (config.swipe) {
     $root.addEventListener('touchstart', onSwipeStart.bind(this));
     $root.addEventListener('mousedown', onSwipeStart.bind(this));
@@ -417,11 +384,10 @@ ChiefSlider.prototype._addEventListener = function() {
     document.addEventListener('mouseup', onSwipeEnd.bind(this));
   }
   $root.addEventListener('dragstart', onDragStart.bind(this));
-  // при изменении активности вкладки
   document.addEventListener('visibilitychange', onVisibilityChange.bind(this));
 };
 
-ChiefSlider.prototype.__refreshExtremeValues = function() {
+createChiefSlider.prototype.__refreshExtremeValues = function() {
   var $itemList = this._$itemList;
   this._minOrder = +$itemList[0].dataset.order;
   this._maxOrder = this._minOrder;
@@ -444,7 +410,7 @@ ChiefSlider.prototype.__refreshExtremeValues = function() {
   }
 };
 
-ChiefSlider.prototype._balancingItems = function() {
+createChiefSlider.prototype._balancingItems = function() {
   if (!this._balancingItemsFlag) {
     return;
   }
@@ -464,7 +430,6 @@ ChiefSlider.prototype._balancingItems = function() {
       translate += count * 100;
       $min.dataset.translate = translate;
       $min.style.transform = 'translateX('.concat(translate, '%)');
-      // update values of extreme properties
       this.__refreshExtremeValues();
     }
   } else {
@@ -477,15 +442,13 @@ ChiefSlider.prototype._balancingItems = function() {
       translate -= count * 100;
       $max.dataset.translate = translate;
       $max.style.transform = 'translateX('.concat(translate, '%)');
-      // update values of extreme properties
       this.__refreshExtremeValues();
     }
   }
-  // updating...
   requestAnimationFrame(this._balancingItems.bind(this));
 };
 
-ChiefSlider.prototype._setActiveClass = function() {
+createChiefSlider.prototype._setActiveClass = function() {
   var activeItems = this._activeItems;
   var $itemList = this._$itemList;
   for (var i = 0, length = $itemList.length; i < length; i++) {
@@ -499,7 +462,7 @@ ChiefSlider.prototype._setActiveClass = function() {
   }
 };
 
-ChiefSlider.prototype._updateIndicators = function() {
+createChiefSlider.prototype._updateIndicators = function() {
   var $indicatorList = this._$indicatorList;
   var $itemList = this._$itemList;
   if (!$indicatorList.length) {
@@ -516,9 +479,9 @@ ChiefSlider.prototype._updateIndicators = function() {
   }
 };
 
-ChiefSlider.prototype._move = function() {
+createChiefSlider.prototype._move = function() {
   var step = this._direction ===
-   'next' ? -this._transformStep : this._transformStep;
+    'next' ? -this._transformStep : this._transformStep;
   var transform = this._transform + step;
   if (!this._config.loop) {
     var endTransformValue =
@@ -567,17 +530,17 @@ ChiefSlider.prototype._move = function() {
   this._$items.dispatchEvent(new CustomEvent('transition-start', {bubbles: true}));
 };
 
-ChiefSlider.prototype._moveToNext = function() {
+createChiefSlider.prototype._moveToNext = function() {
   this._direction = 'next';
   this._move();
 };
 
-ChiefSlider.prototype._moveToPrev = function() {
+createChiefSlider.prototype._moveToPrev = function() {
   this._direction = 'prev';
   this._move();
 };
 
-ChiefSlider.prototype._moveTo = function(index) {
+createChiefSlider.prototype._moveTo = function(index) {
   var $indicatorList = this._$indicatorList;
   var nearestIndex = null;
   var diff = null;
@@ -608,7 +571,7 @@ ChiefSlider.prototype._moveTo = function(index) {
   }
 };
 
-ChiefSlider.prototype._autoplay = function(action) {
+createChiefSlider.prototype._autoplay = function(action) {
   if (!this._config.autoplay) {
     return;
   }
@@ -628,8 +591,7 @@ ChiefSlider.prototype._autoplay = function(action) {
   }
 };
 
-ChiefSlider.prototype._refresh = function() {
-  // create some constants
+createChiefSlider.prototype._refresh = function() {
   var $itemList = this._$itemList;
   var widthItem = $itemList[0].offsetWidth;
   var widthWrapper = this._$wrapper.offsetWidth;
@@ -644,7 +606,6 @@ ChiefSlider.prototype._refresh = function() {
   this._$items.classList.add(SLIDER_TRANSITION_OFF);
   this._$items.style.transform = 'translateX(0)';
 
-  // setting properties after reset
   this._widthItem = widthItem;
   this._widthWrapper = widthWrapper;
   this._itemsInVisibleArea = itemsInVisibleArea;
@@ -653,7 +614,6 @@ ChiefSlider.prototype._refresh = function() {
   this._balancingItemsFlag = false;
   this._activeItems = [];
 
-  // setting order and translate items after reset
   for (var i = 0, length = $itemList.length; i < length; i++) {
     var $item = $itemList[i];
     var position = i;
@@ -674,7 +634,6 @@ ChiefSlider.prototype._refresh = function() {
       }.bind(this)
   );
 
-  // hide prev arrow for non-infinite slider
   if (!this._config.loop) {
     if (this._$controlPrev) {
       this._$controlPrev.classList.add(CLASS_CONTROL_HIDE);
@@ -682,34 +641,31 @@ ChiefSlider.prototype._refresh = function() {
     return;
   }
 
-  // translate last item before first
   var count = $itemList.length - 1;
   var translate = -$itemList.length * 100;
   $itemList[count].dataset.order = -1;
   $itemList[count].dataset.translate = -$itemList.length * 100;
   $itemList[count].style.transform = 'translateX('.concat(translate, '%)');
-  // update values of extreme properties
   this.__refreshExtremeValues();
-  // calling _autoplay
   this._autoplay();
 };
 
-ChiefSlider.prototype.next = function() {
+createChiefSlider.prototype.next = function() {
   this._moveToNext();
 };
-ChiefSlider.prototype.prev = function() {
+createChiefSlider.prototype.prev = function() {
   this._moveToPrev();
 };
-ChiefSlider.prototype.moveTo = function(index) {
+createChiefSlider.prototype.moveTo = function(index) {
   this._moveTo(index);
 };
-ChiefSlider.prototype.refresh = function() {
+createChiefSlider.prototype.refresh = function() {
   this._refresh();
 };
 
 })();
 
- (function() {
+(function() {
   if (typeof window.CustomEvent === 'function' ) return false;
   function CustomEvent(event, params) {
     params = params || {bubbles: false, cancelable: false, detail: null};

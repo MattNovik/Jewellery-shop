@@ -32,28 +32,17 @@
   <header class="page-header page-header--open-menu">
     <div class="wrapper-page-header-top">
       <div class="page-header__top">
-        <div class="wrapper-search wrapper-search--desktop">
+        <form method="post" enctype="multipart/form-data" autocomplete="off" class="wrapper-search wrapper-search--desktop">
           <input type="search" id="search" class="search" placeholder="Type here to search">
           <label for="search">
             <svg height="14" width="14" viewBox="0 0 14 14"><use xlink:href="img/sprite_auto.svg#icon-search"></use></svg>
             </label>
-        </div>
+          </form>
         <nav class="menu menu--tablet menu--tablet-open">
           <svg height="18" width="25" viewBox="0 0 25 18"><use xlink:href="img/sprite_auto.svg#icon-hamburger"></use></svg>
         </nav>
-        <a href="#" class="logo logo--desktop logo--desktop-close">
-          <picture>
-            <!-- 1x: 66x66; 2x: 132x132 -->
-            <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
-            <img class="logo logo--desktop logo--desktop-close" src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo" width="66" height="66">
-          </picture>
-        </a>
-        <a  href="#" class="logo logo--tablet logo--tablet-open">
-          <picture >
-            <!-- 1x: 66x66; 2x: 132x132 -->
-            <source srcset="img/logo_tablet-menu.webp 1x, img/logo_tablet-menu@2x.webp 2x" type="image/webp">
-            <img class="logo logo--tablet logo--tablet-open" src="img/logo_tablet-menu.png" srcset="img/logo_tablet-menu.png 1x, img/logo_tablet-menu@2x.png 2x" alt="logo" width="66" height="66">
-          </picture>
+        <a class="logo logo--open">
+          <svg width="66" height="66" viewBox="0 0 66 66"><use xlink:href="img/sprite_auto.svg#icon-logo"></use></svg>
         </a>
         <div class="wrapper-login-busket wrapper-login-busket--tablet wrapper-login-busket--tablet-open">
           <a href="#" class="wrapper-login-busket__busket">
@@ -69,25 +58,25 @@
     <nav class="menu menu--desktop">
       <ul class="menu__list">
         <li><a href="#">What’s new</a></li>
-        <li><a href="#">Chokers</a></li>
-        <li><a href="#">Necklaces</a></li>
-        <li><a href="#">Rings</a></li>
-        <li><a href="#">Earrings</a></li>
+        <li><a href="catalog.html">Chokers</a></li>
+        <li><a href="catalog.html">Necklaces</a></li>
+        <li><a href="catalog.html">Rings</a></li>
+        <li><a href="catalog.html">Earrings</a></li>
       </ul>
     </nav>
     <div class="menu menu--nav-tablet menu--nav-tablet-open menu--nav-tablet-nojs">
-      <div class="wrapper-search-tablet">
+      <form method="post" enctype="multipart/form-data" autocomplete="off" class="wrapper-search-tablet">
         <input type="search" id="search-menu" class="wrapper-search-tablet__search" placeholder="">
         <label for="search-menu">
           <svg height="14" width="14" viewBox="0 0 14 14"><use xlink:href="img/sprite_auto.svg#icon-search"></use></svg>
           </label>
-      </div>
+        </form>
       <ul class="menu__list-tablet">
         <li><a href="#">What’s new</a></li>
-        <li><a href="#">Chokers</a></li>
-        <li><a href="#">Necklaces</a></li>
-        <li><a href="#">Rings</a></li>
-        <li><a href="#">Earrings</a></li>
+        <li><a href="catalog.html">Chokers</a></li>
+        <li><a href="catalog.html">Necklaces</a></li>
+        <li><a href="catalog.html">Rings</a></li>
+        <li><a href="catalog.html">Earrings</a></li>
       </ul>
       <ul class="menu__list-tablet-about">
         <li><a href="#">About CH</a></li>
@@ -119,124 +108,122 @@
     </section>
     <section class="products-slider">
       <h2>New In</h2>
-      <a href="#" class="products-slider__link">Shop Now</a>
+      <a href="catalog.html" class="products-slider__link">Shop Now</a>
       <div class="slider" id="slider">
-        <div class="slider__container">
-          <div class="slider__wrapper">
-            <div class="slider__items">
-              <div class="slider__item">
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="purple-gemstone-necklace" width="270" height="284">
-                  </picture>
-                  <p>Necklace with amethyst</p>
-                  <p>$ 115</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
-                  </picture>
-                  <p>Layered сhoker</p>
-                  <p>$ 115</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/gold-layered-necklace.webp 1x, img/products/desktop/gold-layered-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/gold-layered-necklace@2x.jpg" srcset="img/products/desktop/gold-layered-necklace.jpg 1x, img/products/desktop/gold-layered-necklace@2x.jpg 2x" alt="gold-layered-necklace" width="270" height="284">
-                  </picture>
-                  <p>Gold chain</p>
-                  <p>$ 215</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/marble-earrings.webp 1x, img/products/desktop/marble-earrings@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/marble-earrings@2x.jpg" srcset="img/products/desktop/marble-earrings.jpg 1x, img/products/desktop/marble-earrings@2x.jpg 2x" alt="marble-earrings" width="270" height="284">
-                  </picture>
-                  <p>Galaxy earrings</p>
-                  <p>$ 95</p>
-                </div>
+        <div class="slider__wrapper">
+          <div class="slider__items">
+            <div class="slider__item">
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="purple-gemstone-necklace" width="270" height="284">
+                </picture>
+                <p>Necklace with amethyst</p>
+                <p>$ 115</p>
               </div>
-              <div class="slider__item">
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="purple-gemstone-necklace" width="270" height="284">
-                  </picture>
-                  <p>Necklace with amethyst</p>
-                  <p>$ 115</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
-                  </picture>
-                  <p>Layered сhoker</p>
-                  <p>$ 115</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/gold-layered-necklace.webp 1x, img/products/desktop/gold-layered-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/gold-layered-necklace@2x.jpg" srcset="img/products/desktop/gold-layered-necklace.jpg 1x, img/products/desktop/gold-layered-necklace@2x.jpg 2x" alt="gold-layered-necklace" width="270" height="284">
-                  </picture>
-                  <p>Gold chain</p>
-                  <p>$ 215</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/marble-earrings.webp 1x, img/products/desktop/marble-earrings@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/marble-earrings@2x.jpg" srcset="img/products/desktop/marble-earrings.jpg 1x, img/products/desktop/marble-earrings@2x.jpg 2x" alt="marble-earrings" width="270" height="284">
-                  </picture>
-                  <p>Galaxy earrings</p>
-                  <p>$ 95</p>
-                </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
+                </picture>
+                <p>Layered сhoker</p>
+                <p>$ 115</p>
               </div>
-              <div class="slider__item">
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="purple-gemstone-necklace" width="270" height="284">
-                  </picture>
-                  <p>Necklace with amethyst</p>
-                  <p>$ 115</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
-                  </picture>
-                  <p>Layered сhoker</p>
-                  <p>$ 115</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/gold-layered-necklace.webp 1x, img/products/desktop/gold-layered-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/gold-layered-necklace@2x.jpg" srcset="img/products/desktop/gold-layered-necklace.jpg 1x, img/products/desktop/gold-layered-necklace@2x.jpg 2x" alt="gold-layered-necklace" width="270" height="284">
-                  </picture>
-                  <p>Gold chain</p>
-                  <p>$ 215</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/marble-earrings.webp 1x, img/products/desktop/marble-earrings@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/marble-earrings@2x.jpg" srcset="img/products/desktop/marble-earrings.jpg 1x, img/products/desktop/marble-earrings@2x.jpg 2x" alt="marble-earrings" width="270" height="284">
-                  </picture>
-                  <p>Galaxy earrings</p>
-                  <p>$ 95</p>
-                </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/gold-layered-necklace.webp 1x, img/products/desktop/gold-layered-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/gold-layered-necklace@2x.jpg" srcset="img/products/desktop/gold-layered-necklace.jpg 1x, img/products/desktop/gold-layered-necklace@2x.jpg 2x" alt="gold-layered-necklace" width="270" height="284">
+                </picture>
+                <p>Gold chain</p>
+                <p>$ 215</p>
+              </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/marble-earrings.webp 1x, img/products/desktop/marble-earrings@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/marble-earrings@2x.jpg" srcset="img/products/desktop/marble-earrings.jpg 1x, img/products/desktop/marble-earrings@2x.jpg 2x" alt="marble-earrings" width="270" height="284">
+                </picture>
+                <p>Galaxy earrings</p>
+                <p>$ 95</p>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="purple-gemstone-necklace" width="270" height="284">
+                </picture>
+                <p>Necklace with amethyst</p>
+                <p>$ 115</p>
+              </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
+                </picture>
+                <p>Layered сhoker</p>
+                <p>$ 115</p>
+              </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/gold-layered-necklace.webp 1x, img/products/desktop/gold-layered-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/gold-layered-necklace@2x.jpg" srcset="img/products/desktop/gold-layered-necklace.jpg 1x, img/products/desktop/gold-layered-necklace@2x.jpg 2x" alt="gold-layered-necklace" width="270" height="284">
+                </picture>
+                <p>Gold chain</p>
+                <p>$ 215</p>
+              </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/marble-earrings.webp 1x, img/products/desktop/marble-earrings@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/marble-earrings@2x.jpg" srcset="img/products/desktop/marble-earrings.jpg 1x, img/products/desktop/marble-earrings@2x.jpg 2x" alt="marble-earrings" width="270" height="284">
+                </picture>
+                <p>Galaxy earrings</p>
+                <p>$ 95</p>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="purple-gemstone-necklace" width="270" height="284">
+                </picture>
+                <p>Necklace with amethyst</p>
+                <p>$ 115</p>
+              </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
+                </picture>
+                <p>Layered сhoker</p>
+                <p>$ 115</p>
+              </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/gold-layered-necklace.webp 1x, img/products/desktop/gold-layered-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/gold-layered-necklace@2x.jpg" srcset="img/products/desktop/gold-layered-necklace.jpg 1x, img/products/desktop/gold-layered-necklace@2x.jpg 2x" alt="gold-layered-necklace" width="270" height="284">
+                </picture>
+                <p>Gold chain</p>
+                <p>$ 215</p>
+              </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/marble-earrings.webp 1x, img/products/desktop/marble-earrings@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/marble-earrings@2x.jpg" srcset="img/products/desktop/marble-earrings.jpg 1x, img/products/desktop/marble-earrings@2x.jpg 2x" alt="marble-earrings" width="270" height="284">
+                </picture>
+                <p>Galaxy earrings</p>
+                <p>$ 95</p>
               </div>
             </div>
           </div>
@@ -246,150 +233,147 @@
         <a href="#" class="slider__control" data-slide="next">
         </a>
         <ul class="slider__indicators">
-          <li data-slide-to="1">1</li>
-          <li data-slide-to="2">2</li>
-          <li data-slide-to="3">3</li>
+          <li  class="slider__indicators-element" data-slide-to="1">1</li>
+          <li  class="slider__indicators-element" data-slide-to="2">2</li>
+          <li  class="slider__indicators-element" data-slide-to="3">3</li>
         </ul>
       </div>
       <div class="slider" id="slider-mob">
-        <div class="slider__container">
-          <div class="slider__wrapper">
-            <div class="slider__items">
-              <div class="slider__item">
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="prod" width="270" height="284">
-                  </picture>
-                  <p>Necklace with amethyst</p>
-                  <p>$ 145</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
-                  </picture>
-                  <p>Layered сhoker</p>
-                  <p>$ 115</p>
-                </div>
+        <div class="slider__wrapper">
+          <div class="slider__items">
+            <div class="slider__item">
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="prod" width="270" height="284">
+                </picture>
+                <p>Necklace with amethyst</p>
+                <p>$ 145</p>
               </div>
-              <div class="slider__item">
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="prod" width="270" height="284">
-                  </picture>
-                  <p>Necklace with amethyst</p>
-                  <p>$ 145</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
-                  </picture>
-                  <p>Layered сhoker</p>
-                  <p>$ 115</p>
-                </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
+                </picture>
+                <p>Layered сhoker</p>
+                <p>$ 115</p>
               </div>
-              <div class="slider__item">
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="prod" width="270" height="284">
-                  </picture>
-                  <p>Necklace with amethyst</p>
-                  <p>$ 145</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
-                  </picture>
-                  <p>Layered сhoker</p>
-                  <p>$ 115</p>
-                </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="prod" width="270" height="284">
+                </picture>
+                <p>Necklace with amethyst</p>
+                <p>$ 145</p>
               </div>
-              <div class="slider__item">
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="prod" width="270" height="284">
-                  </picture>
-                  <p>Necklace with amethyst</p>
-                  <p>$ 145</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
-                  </picture>
-                  <p>Layered сhoker</p>
-                  <p>$ 115</p>
-                </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
+                </picture>
+                <p>Layered сhoker</p>
+                <p>$ 115</p>
               </div>
-              <div class="slider__item">
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="prod" width="270" height="284">
-                  </picture>
-                  <p>Necklace with amethyst</p>
-                  <p>$ 145</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
-                  </picture>
-                  <p>Layered сhoker</p>
-                  <p>$ 115</p>
-                </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="prod" width="270" height="284">
+                </picture>
+                <p>Necklace with amethyst</p>
+                <p>$ 145</p>
               </div>
-              <div class="slider__item">
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="prod" width="270" height="284">
-                  </picture>
-                  <p>Necklace with amethyst</p>
-                  <p>$ 145</p>
-                </div>
-                <div class="slider__item-container">
-                  <picture>
-                    <!-- 1x: 270x284; 2x: 540x568 -->
-                    <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
-                    <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
-                  </picture>
-                  <p>Layered сhoker</p>
-                  <p>$ 115</p>
-                </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
+                </picture>
+                <p>Layered сhoker</p>
+                <p>$ 115</p>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="prod" width="270" height="284">
+                </picture>
+                <p>Necklace with amethyst</p>
+                <p>$ 145</p>
+              </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
+                </picture>
+                <p>Layered сhoker</p>
+                <p>$ 115</p>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="prod" width="270" height="284">
+                </picture>
+                <p>Necklace with amethyst</p>
+                <p>$ 145</p>
+              </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
+                </picture>
+                <p>Layered сhoker</p>
+                <p>$ 115</p>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/purple-gemstone-necklace.webp 1x, img/products/desktop/purple-gemstone-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/purple-gemstone-necklace@2x.jpg" srcset="img/products/desktop/purple-gemstone-necklace.jpg 1x, img/products/desktop/purple-gemstone-necklace@2x.jpg 2x" alt="prod" width="270" height="284">
+                </picture>
+                <p>Necklace with amethyst</p>
+                <p>$ 145</p>
+              </div>
+              <div class="slider__item-container">
+                <picture>
+                  <!-- 1x: 270x284; 2x: 540x568 -->
+                  <source srcset="img/products/desktop/black-leather-choker-necklace.webp 1x, img/products/desktop/black-leather-choker-necklace@2x.webp 2x" type="image/webp">
+                  <img src="img/products/desktop/black-leather-choker-necklace@2x.jpg" srcset="img/products/desktop/black-leather-choker-necklace.jpg 1x, img/products/desktop/black-leather-choker-necklace@2x.jpg 2x" alt="black-leather-choker-necklace" width="270" height="284">
+                </picture>
+                <p>Layered сhoker</p>
+                <p>$ 115</p>
               </div>
             </div>
           </div>
         </div>
-        <!-- Кнопки для перехода к предыдущему и следующему слайду -->
         <a href="#" class="slider__control" data-slide="prev">
         </a>
         <a href="#" class="slider__control" data-slide="next">
         </a>
         <ul class="slider__indicators slider__indicators--tablet">
-          <li data-slide-to="1">1</li>
-          <li data-slide-to="2">2</li>
-          <li data-slide-to="3">3</li>
-          <li data-slide-to="4">4</li>
-          <li data-slide-to="5">5</li>
-          <li data-slide-to="6">6</li>
+          <li  class="slider__indicators-element" data-slide-to="1">1</li>
+          <li  class="slider__indicators-element" data-slide-to="2">2</li>
+          <li  class="slider__indicators-element" data-slide-to="3">3</li>
+          <li  class="slider__indicators-element" data-slide-to="4">4</li>
+          <li  class="slider__indicators-element" data-slide-to="5">5</li>
+          <li  class="slider__indicators-element" data-slide-to="6">6</li>
         </ul>
         <div class="slider__indicators slider__indicators--mob">
           <p><span class="active-page">1</span><span>of</span>6</p>

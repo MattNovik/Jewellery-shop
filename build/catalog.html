@@ -32,28 +32,17 @@
   <header class="page-header page-header--open-menu">
     <div class="wrapper-page-header-top">
       <div class="page-header__top">
-        <div class="wrapper-search wrapper-search--desktop">
+        <form method="post" enctype="multipart/form-data" autocomplete="off" class="wrapper-search wrapper-search--desktop">
           <input type="search" id="search" class="search" placeholder="Type here to search">
           <label for="search">
             <svg height="14" width="14" viewBox="0 0 14 14"><use xlink:href="img/sprite_auto.svg#icon-search"></use></svg>
             </label>
-        </div>
+          </form>
         <nav class="menu menu--tablet menu--tablet-open">
           <svg height="18" width="25" viewBox="0 0 25 18"><use xlink:href="img/sprite_auto.svg#icon-hamburger"></use></svg>
         </nav>
-        <a href="index.html" class="logo logo--desktop logo--desktop-close">
-          <picture>
-            <!-- 1x: 66x66; 2x: 132x132 -->
-            <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
-            <img class="logo logo--desktop logo--desktop-close" src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="logo" width="66" height="66">
-          </picture>
-        </a>
-        <a href="index.html" class="logo logo--tablet logo--tablet-open">
-          <picture>
-            <!-- 1x: 66x66; 2x: 132x132 -->
-            <source srcset="img/logo_tablet-menu.webp 1x, img/logo_tablet-menu@2x.webp 2x" type="image/webp">
-            <img class="logo logo--tablet logo--tablet-open" src="img/logo_tablet-menu.png" srcset="img/logo_tablet-menu.png 1x, img/logo_tablet-menu@2x.png 2x" alt="logo" width="66" height="66">
-          </picture>
+        <a href="index.html" class="logo logo--open">
+          <svg width="66" height="66" viewBox="0 0 66 66"><use xlink:href="img/sprite_auto.svg#icon-logo"></use></svg>
         </a>
         <div class="wrapper-login-busket wrapper-login-busket--tablet wrapper-login-busket--tablet-open">
           <a href="#" class="wrapper-login-busket__busket">
@@ -76,12 +65,12 @@
       </ul>
     </nav>
     <div class="menu menu--nav-tablet menu--nav-tablet-open menu--nav-tablet-nojs">
-      <div class="wrapper-search-tablet">
+      <form method="post" enctype="multipart/form-data" autocomplete="off" class="wrapper-search-tablet">
         <input type="search" id="search-menu" class="wrapper-search-tablet__search" placeholder="">
         <label for="search-menu">
           <svg height="14" width="14" viewBox="0 0 14 14"><use xlink:href="img/sprite_auto.svg#icon-search"></use></svg>
           </label>
-      </div>
+        </form>
       <ul class="menu__list-tablet">
         <li><a href="#">What’s new</a></li>
         <li><a href="#">Chokers</a></li>
@@ -126,29 +115,29 @@
             <div class="filter-form__element filter-form__element--products filter-form__element--open">
               <h2>Product</h2>
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
-              <input class="visibility-hidden" type="checkbox" id="necklaces" checked="">
+              <input type="checkbox" id="necklaces" checked="">
               <label for="necklaces">Necklaces</label>
-              <input class="visibility-hidden" type="checkbox" id="chokers" checked="">
+              <input type="checkbox" id="chokers" checked="">
               <label for="chokers">Chokers</label>
-              <input class="visibility-hidden" type="checkbox" id="rings">
+              <input type="checkbox" id="rings">
               <label for="rings">Rings</label>
-              <input class="visibility-hidden" type="checkbox" id="earrings" checked="">
+              <input type="checkbox" id="earrings" checked="">
               <label for="earrings">Earrings</label>
             </div>
             <div class="filter-form__element filter-form__element--material">
               <h2>Material</h2>
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
-              <input class="visibility-hidden" type="checkbox" id="gold">
+              <input type="checkbox" id="gold">
               <label for="gold">Gold</label>
-              <input class="visibility-hidden" type="checkbox" id="silver">
+              <input type="checkbox" id="silver">
               <label for="silver">Silver</label>
             </div>
             <div class="filter-form__element filter-form__element--collection">
               <h2>Collection</h2>
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
-              <input class="visibility-hidden" type="checkbox" id="pink">
+              <input type="checkbox" id="pink">
               <label for="pink">Pink</label>
-              <input class="visibility-hidden" type="checkbox" id="dreams">
+              <input type="checkbox" id="dreams">
               <label for="dreams">Dreams</label>
             </div>
             <div class="filter-form__element filter-form__element--price">

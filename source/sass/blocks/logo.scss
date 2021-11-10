@@ -1,24 +1,21 @@
 .logo {
 
-  &.logo--tablet {
-    display: none;
+  svg {
+    fill:$second;
   }
-
   @media (max-width: $tablet-width) {
 
-    &.logo--desktop-close {
-      display: none;
-    }
-    &.logo--tablet {
-      &.logo--tablet-open {
-        display: block;
+    &.logo--open {
+      z-index: 50;
+      svg {
+        fill:#fff;
       }
     }
   }
 
-
   @media (max-width: $mobile-width-only) {
-    img {
+
+    svg {
       width:52px;
       height:52px;
     }
