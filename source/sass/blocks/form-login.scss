@@ -111,7 +111,7 @@
 .form-login__image {
   width:100%;
   min-height:138px;
-  background-image: url('../../img/popup-desktop.jpg');
+  background-image: url('../img/popup-desktop.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -139,7 +139,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
-    color: #000;
+    color: $text-dark;
   }
 
   input::placeholder {

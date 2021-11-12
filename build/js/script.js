@@ -20,6 +20,7 @@
   var pageHeader = document.querySelector('.page-header');
   var menuBusketTablet = document.querySelector('.wrapper-login-busket--tablet');
   var logo = document.querySelector('.logo');
+  var formLoginLastElem = document.querySelector('.form-login__registration');
   var checkingEventListener = 0;
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -30,13 +31,24 @@
       var sliderMob = new CreateChiefSlider('#slider-mob');
     }
   });
-
-  menuTablet.classList.remove('menu--nav-tablet-nojs');
-  openMenuTablet.classList.remove('menu--tablet-open');
-  pageHeader.classList.remove('page-header--open-menu');
-  menuTablet.classList.remove('menu--nav-tablet-open');
-  menuBusketTablet.classList.remove('wrapper-login-busket--tablet-open');
-  logo.classList.remove('logo--open');
+  if (menuTablet) {
+    menuTablet.classList.remove('menu--nav-tablet-nojs');
+  }
+  if (openMenuTablet) {
+    openMenuTablet.classList.remove('menu--tablet-open');
+  }
+  if (pageHeader) {
+    pageHeader.classList.remove('page-header--open-menu');
+  }
+  if (menuTablet) {
+    menuTablet.classList.remove('menu--nav-tablet-open');
+  }
+  if (menuBusketTablet) {
+    menuBusketTablet.classList.remove('wrapper-login-busket--tablet-open');
+  }
+  if (logo) {
+    logo.classList.remove('logo--open');
+  }
 
   for (var i = 0; i < questionsListElements.length; i++) {
     questionsListElements[i].classList.remove('questions__list-element--open');
@@ -46,26 +58,46 @@
     });
   }
 
-  menuTablet.addEventListener('click', function (evt) {
-    if (evt.target.classList.contains('menu__login--menu')) {
-      evt.preventDefault();
-      openMenuTablet.classList.toggle('menu--tablet-open');
-      menuTablet.classList.toggle('menu--nav-tablet-open');
-      pageHeader.classList.toggle('page-header--open-menu');
-      menuBusketTablet.classList.toggle('wrapper-login-busket--tablet-open');
-      if (checkingEventListener === 0) {
-        document.addEventListener('keydown', onMenuEscKeydown);
-        checkingEventListener++;
-      } else {
-        document.removeEventListener('keydown', onMenuEscKeydown);
-        checkingEventListener--;
+  if (menuTablet) {
+    menuTablet.addEventListener('click', function (evt) {
+      if (evt.target.classList.contains('menu__login--menu')) {
+        evt.preventDefault();
+        openMenuTablet.classList.toggle('menu--tablet-open');
+        menuTablet.classList.toggle('menu--nav-tablet-open');
+        pageHeader.classList.toggle('page-header--open-menu');
+        menuBusketTablet.classList.toggle('wrapper-login-busket--tablet-open');
+        if (checkingEventListener === 0) {
+          document.addEventListener('keydown', onMenuEscKeydown);
+          checkingEventListener++;
+        } else {
+          document.removeEventListener('keydown', onMenuEscKeydown);
+          checkingEventListener--;
+        }
+        logo.classList.toggle('logo--open');
+        popup.classList.remove('form-login--close');
+        pageHover.classList.remove('page-main__module-hover--closed');
+        loginFormNameInput.focus();
+        document.addEventListener('keydown', onPopupEscKeydown);
+      } else if (evt.target.tagName === 'A') {
+        openMenuTablet.classList.toggle('menu--tablet-open');
+        page.classList.toggle('page--hidden');
+        menuTablet.classList.toggle('menu--nav-tablet-open');
+        pageHeader.classList.toggle('page-header--open-menu');
+        menuBusketTablet.classList.toggle('wrapper-login-busket--tablet-open');
+        if (checkingEventListener === 0) {
+          document.addEventListener('keydown', onMenuEscKeydown);
+          checkingEventListener++;
+        } else {
+          document.removeEventListener('keydown', onMenuEscKeydown);
+          checkingEventListener--;
+        }
+        logo.classList.toggle('logo--open');
       }
-      logo.classList.toggle('logo--open');
-      popup.classList.remove('form-login--close');
-      pageHover.classList.remove('page-main__module-hover--closed');
-      loginFormNameInput.focus();
-      document.addEventListener('keydown', onPopupEscKeydown);
-    } else if (evt.target.tagName === 'A') {
+    });
+  }
+
+  if (openMenuTablet) {
+    openMenuTablet.addEventListener('click', function () {
       openMenuTablet.classList.toggle('menu--tablet-open');
       page.classList.toggle('page--hidden');
       menuTablet.classList.toggle('menu--nav-tablet-open');
@@ -79,24 +111,8 @@
         checkingEventListener--;
       }
       logo.classList.toggle('logo--open');
-    }
-  });
-
-  openMenuTablet.addEventListener('click', function () {
-    openMenuTablet.classList.toggle('menu--tablet-open');
-    page.classList.toggle('page--hidden');
-    menuTablet.classList.toggle('menu--nav-tablet-open');
-    pageHeader.classList.toggle('page-header--open-menu');
-    menuBusketTablet.classList.toggle('wrapper-login-busket--tablet-open');
-    if (checkingEventListener === 0) {
-      document.addEventListener('keydown', onMenuEscKeydown);
-      checkingEventListener++;
-    } else {
-      document.removeEventListener('keydown', onMenuEscKeydown);
-      checkingEventListener--;
-    }
-    logo.classList.toggle('logo--open');
-  });
+    });
+  }
 
   var onMenuEscKeydown = function (evt) {
     if (isEscEvent(evt)) {
@@ -111,13 +127,15 @@
     }
   };
 
-  inputSearchTabletMenu.addEventListener('change', function () {
-    if (inputSearchTabletMenu.value !== 0) {
-      inputSearchTabletMenu.classList.add('wrapper-search-tablet__search--no-label');
-    } else {
-      inputSearchTabletMenu.classList.remove('wrapper-search-tablet__search--no-label');
-    }
-  });
+  if (inputSearchTabletMenu) {
+    inputSearchTabletMenu.addEventListener('change', function () {
+      if (inputSearchTabletMenu.value !== 0) {
+        inputSearchTabletMenu.classList.add('wrapper-search-tablet__search--no-label');
+      } else {
+        inputSearchTabletMenu.classList.remove('wrapper-search-tablet__search--no-label');
+      }
+    });
+  }
 
   if (openFilterForm) {
     openFilterForm.addEventListener('click', function () {
@@ -209,6 +227,10 @@
       }
     });
   }
+
+  formLoginLastElem.addEventListener('blur', function () {
+    popupClose.focus();
+  });
 
   var WRAPPER_SELECTOR = '.slider__wrapper';
   var ITEMS_SELECTOR = '.slider__items';

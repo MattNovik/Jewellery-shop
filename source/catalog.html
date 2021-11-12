@@ -90,7 +90,7 @@
   <main class="page-main">
     <div class="page-main__module-hover page-main__module-hover--closed"></div>
     <section class="form-login form-login--close">
-      <a href="main.html" class="form-login__close"></a>
+      <a href="main.html" class="form-login__close" tabindex="0"></a>
       <div class="form-login__image"></div>
       <h3>Log In</h3>
       <form method="post" enctype="multipart/form-data" autocomplete="off" class="form-login__form">
@@ -100,7 +100,7 @@
         <label for="password-login"></label>
         <a href="#">Forgot your password?</a>
         <button class="form-login__submit" type="submit">Log In</button>
-        <p>Don’t have an account? <a href="#">Sign up</a></p>
+        <p>Don’t have an account? <a href="#" class="form-login__registration">Sign up</a></p>
       </form>
     </section>
     <section class="main-image-catalog">
@@ -128,18 +128,26 @@
             <div class="filter-form__element filter-form__element--material">
               <h2>Material</h2>
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
-              <input type="checkbox" id="gold">
-              <label for="gold">Gold</label>
-              <input type="checkbox" id="silver">
-              <label for="silver">Silver</label>
+              <label for="gold">
+                Gold
+                <input type="checkbox" id="gold">
+              </label>
+              <label for="silver">
+                Silver
+                <input type="checkbox" id="silver">
+              </label>
             </div>
             <div class="filter-form__element filter-form__element--collection">
               <h2>Collection</h2>
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
-              <input type="checkbox" id="pink">
-              <label for="pink">Pink</label>
-              <input type="checkbox" id="dreams">
-              <label for="dreams">Dreams</label>
+              <label for="pink">
+                Pink
+                <input type="checkbox" id="pink">
+              </label>
+              <label for="dreams">
+                Dreams
+                <input type="checkbox" id="dreams">
+              </label>
             </div>
             <div class="filter-form__element filter-form__element--price">
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
