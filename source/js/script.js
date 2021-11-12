@@ -40,8 +40,9 @@
 
   for (var i = 0; i < questionsListElements.length; i++) {
     questionsListElements[i].classList.remove('questions__list-element--open');
-    questionsListElements[i].addEventListener('click', function () {
-      questionsListElements[i].classList.toggle('questions__list-element--open');
+    questionsListElements[i].addEventListener('click', function (evt) {
+      var newELem = evt.currentTarget;
+      newELem.classList.toggle('questions__list-element--open');
     });
   }
 
@@ -202,8 +203,9 @@
 
   for (var j = 0; j < filterFormElements.length; j++) {
     filterFormElements[j].addEventListener('click', function (evt) {
+      var currentElem = evt.currentTarget;
       if (evt.target.tagName === 'H2' || evt.target.tagName === 'svg' || evt.target.tagName === 'use') {
-        filterFormElements[j].classList.toggle('filter-form__element--open');
+        currentElem.classList.toggle('filter-form__element--open');
       }
     });
   }

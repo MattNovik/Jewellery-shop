@@ -8,7 +8,7 @@
   background-color: $second;
   background-image: url('../img/main-index-desktop.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-image: image-set(
         url('../img/main-index-desktop.webp') type('image/webp'),
         url('../img/main-index-desktop.jpg') type('image/jpeg'));

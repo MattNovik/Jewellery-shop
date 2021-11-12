@@ -15,7 +15,8 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    width:320px;
+    width:100%;
+    align-items: center;
     box-sizing: border-box;
     padding:0 15px;
     margin:50px auto;

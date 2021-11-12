@@ -78,7 +78,7 @@
 
   @media (max-width: $mobile-width-only) {
     width:290px;
-    height:512px;
+    min-height:512px;
     flex-direction: column;
     margin:0 0 40px 0;
 
@@ -136,7 +136,7 @@
     font-size: 16px;
     line-height: 21px;
     color: $text-dark;
-    margin:35px 0 0 0;
+    margin:35px 0 20px 0;
     text-decoration: none;
 
     &:after {
@@ -158,7 +158,7 @@
     }
 
     a {
-      margin:20px 0 0 0;
+      margin:20px 0 20px 0;
     }
   }
 
@@ -170,7 +170,7 @@
     }
 
     a {
-      margin:35px 0 0 0;
+      margin:35px 0 20px 0;
     }
 
     &.article__info--special {
@@ -188,8 +188,7 @@
   @media (max-width: $mobile-width-only) {
     width:290px;
     min-height:256px;
-
-
+    margin:256px 0 0 0;
     p {
       margin:45px 0 0 0;
     }

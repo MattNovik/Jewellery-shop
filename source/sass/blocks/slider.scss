@@ -45,7 +45,9 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    width:290px;
+    width:100%;
+    margin:0 15px;
+    max-width:calc(100vw - 30px);
     min-height: 240px;
     box-sizing: border-box;
   }
@@ -115,10 +117,19 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    width:130px;
+    min-width:130px;
+    width:40%;
+    max-width:calc((100vw - 30px)/2 - 15px);
 
+    picture {
+      width:100%;
+      min-height:136px;
+      max-height: calc(((100vw - 30px) / 2 - 15.5px) * 1.05);
+    }
     img {
-      height:136px;
+      height:100%;
+      max-height: calc(((100vw - 30px) / 2 - 100px) * 1.05);
+      min-height:136px;
     }
 
     p:first-of-type {
