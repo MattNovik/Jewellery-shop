@@ -113,43 +113,43 @@
         <section class="filter-form filter-form--close">
           <span class="filter-form__close"></span>
           <form method="post" enctype="multipart/form-data" autocomplete="off" class="filter-form__form">
-            <div class="filter-form__element filter-form__element--products filter-form__element--open">
+            <div class="filter-form__element filter-form__element--products filter-form__element--open" tabindex="0">
               <h2>Product</h2>
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
-              <input type="checkbox" id="necklaces" checked="">
-              <label for="necklaces">Necklaces</label>
-              <input type="checkbox" id="chokers" checked="">
-              <label for="chokers">Chokers</label>
-              <input type="checkbox" id="rings">
-              <label for="rings">Rings</label>
-              <input type="checkbox" id="earrings" checked="">
-              <label for="earrings">Earrings</label>
+              <input type="checkbox" id="necklaces" checked="" tabindex="-1">
+              <label for="necklaces" tabindex="0">Necklaces</label>
+              <input type="checkbox" id="chokers" checked="" tabindex="-1">
+              <label for="chokers" tabindex="0">Chokers</label>
+              <input type="checkbox" id="rings" tabindex="-1">
+              <label for="rings" tabindex="0">Rings</label>
+              <input type="checkbox" id="earrings" checked="" tabindex="-1">
+              <label for="earrings" tabindex="0">Earrings</label>
             </div>
-            <div class="filter-form__element filter-form__element--material">
+            <div class="filter-form__element filter-form__element--material" tabindex="0">
               <h2>Material</h2>
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
-              <label for="gold">
+              <input type="checkbox" id="gold" tabindex="-1">
+              <label for="gold" tabindex="0">
                 Gold
-                <input type="checkbox" id="gold">
               </label>
-              <label for="silver">
+              <input type="checkbox" id="silver" tabindex="-1">
+              <label for="silver" tabindex="0">
                 Silver
-                <input type="checkbox" id="silver">
               </label>
             </div>
-            <div class="filter-form__element filter-form__element--collection">
+            <div class="filter-form__element filter-form__element--collection" tabindex="0">
               <h2>Collection</h2>
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
-              <label for="pink">
+              <input type="checkbox" id="pink" tabindex="-1">
+              <label for="pink" tabindex="0">
                 Pink
-                <input type="checkbox" id="pink">
               </label>
-              <label for="dreams">
+              <input type="checkbox" id="dreams" tabindex="-1">
+              <label for="dreams" tabindex="0">
                 Dreams
-                <input type="checkbox" id="dreams">
               </label>
             </div>
-            <div class="filter-form__element filter-form__element--price">
+            <div class="filter-form__element filter-form__element--price" tabindex="0">
               <svg height="8" width="15" viewBox="0 0 15 8"><use xlink:href="img/sprite_auto.svg#icon-halfarrow"></use></svg>
               <h2>Price</h2>
               <div class="filter-form__price-line">

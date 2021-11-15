@@ -103,6 +103,12 @@
     color: $text-dark;
     box-sizing: border-box;
     cursor: pointer;
+    border:solid 1px transparent;
+
+    &:focus-visible{
+      outline:none;
+      border:solid 1px $second;
+    }
 
     &:before {
       content:'';
@@ -110,7 +116,7 @@
       left:0;
       top:0;
       width:15px;
-      height:15px;
+      height:16px;
       border:solid 1px $second;
     }
   }
